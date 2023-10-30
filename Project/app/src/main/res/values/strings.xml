@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Project</string>
     <string-array name="user_type">
-        <item>"Admin"</item>
-        <item>"Employee"</item>
         <item>"User"</item>
+        <item>"Employee"</item>
+        <item>"Admin"</item>
 
         Project
     </string-array>
