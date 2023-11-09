@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_login.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_admin_manage_branches.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_admin_manage_branches.xml"
+    },
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_admin_manage_users.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_admin_manage_users.xml"
+    },
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_signup.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_main.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_admin_homepage.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_admin_homepage.xml"
+    },
+    {
+        "merged": "com.example.project.app-mergeDebugResources-40:/layout/activity_admin_manage_services.xml",
+        "source": "com.example.project.app-main-43:/layout/activity_admin_manage_services.xml"
+    }
+]
