@@ -6,6 +6,7 @@ public abstract class Account {
     String lastName;
     String email;
     String password;
+    int accountType; // 0 for user, 1 for employee/branch, 2 for admin
 
 
     void setFirstName(String firstName) {
@@ -20,6 +21,9 @@ public abstract class Account {
     void setPassword(String password) {
         this.password = password;
     }
+    void setAccountType(int accountType) {
+        this.accountType = accountType;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -32,6 +36,9 @@ public abstract class Account {
     }
     public String getPassword() {
         return password;
+    }
+    public int getAccountType() {
+        return accountType;
     }
 }
 

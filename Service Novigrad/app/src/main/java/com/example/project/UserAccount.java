@@ -9,5 +9,6 @@ public class UserAccount extends Account {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.accountType = 0;
     }
 }
