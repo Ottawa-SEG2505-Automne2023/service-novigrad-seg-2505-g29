@@ -3210,7 +3210,13 @@ id btnLogin
 id btnManageBranches
 id btnManageServices
 id btnManageUsers
+id buttonAddDocument
+id buttonAddFormField
+id buttonCreateService
+id buttonCreateServiceType
+id buttonDeleteService
 id buttonPanel
+id buttonUpdateService
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3284,6 +3290,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editTextServiceName
 id edit_query
 id edit_text_id
 id elastic
@@ -3359,7 +3366,10 @@ id light
 id line1
 id line3
 id linear
+id linearLayoutDocuments
+id linearLayoutFormFields
 id listMode
+id listViewServices
 id list_item
 id m3_side_sheet
 id marquee
@@ -3575,7 +3585,7 @@ id textTop
 id textView
 id textView2
 id textView3
-id textView4
+id textViewServiceName
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3769,11 +3779,13 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout layout_service
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
 layout m3_auto_complete_simple_item
 layout m3_side_sheet_dialog
+layout manage_service
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

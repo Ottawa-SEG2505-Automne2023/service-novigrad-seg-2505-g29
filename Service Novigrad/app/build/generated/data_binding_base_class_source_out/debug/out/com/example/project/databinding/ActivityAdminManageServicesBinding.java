@@ -4,10 +4,11 @@ package com.example.project.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.project.R;
@@ -17,20 +18,24 @@ import java.lang.String;
 
 public final class ActivityAdminManageServicesBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView textView4;
+  public final Button buttonCreateService;
 
-  private ActivityAdminManageServicesBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textView4) {
+  @NonNull
+  public final ListView listViewServices;
+
+  private ActivityAdminManageServicesBinding(@NonNull RelativeLayout rootView,
+      @NonNull Button buttonCreateService, @NonNull ListView listViewServices) {
     this.rootView = rootView;
-    this.textView4 = textView4;
+    this.buttonCreateService = buttonCreateService;
+    this.listViewServices = listViewServices;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +60,20 @@ public final class ActivityAdminManageServicesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.textView4;
-      TextView textView4 = ViewBindings.findChildViewById(rootView, id);
-      if (textView4 == null) {
+      id = R.id.buttonCreateService;
+      Button buttonCreateService = ViewBindings.findChildViewById(rootView, id);
+      if (buttonCreateService == null) {
         break missingId;
       }
 
-      return new ActivityAdminManageServicesBinding((ConstraintLayout) rootView, textView4);
+      id = R.id.listViewServices;
+      ListView listViewServices = ViewBindings.findChildViewById(rootView, id);
+      if (listViewServices == null) {
+        break missingId;
+      }
+
+      return new ActivityAdminManageServicesBinding((RelativeLayout) rootView, buttonCreateService,
+          listViewServices);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

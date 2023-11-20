@@ -56,11 +56,6 @@ public class LoginActivity extends AppCompatActivity {
                 if(email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Please fill out all required fields", Toast.LENGTH_SHORT).show();
                 }
-                //admin login
-                else if (email.equals("admin") && password.equals("admin")) {
-                    startActivity(new Intent(LoginActivity.this, AdminHomepage.class));
-                    Toast.makeText(LoginActivity.this, "administrator login succesful", Toast.LENGTH_SHORT).show();
-                }
                 //Checks if neither or both types of accounts are selected
                 else if (!userRadioButton.isChecked() && !employeeRadioButton.isChecked()) {
                     Toast.makeText(LoginActivity.this, "please select the kind of account you are logging in as", Toast.LENGTH_SHORT).show();

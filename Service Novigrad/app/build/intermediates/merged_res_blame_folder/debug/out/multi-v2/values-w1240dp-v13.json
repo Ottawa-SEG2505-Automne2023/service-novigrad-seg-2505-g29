@@ -4,13 +4,13 @@
             "outputFile": "com.example.project.app-mergeDebugResources-3:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\University\\Fall 2023\\SEG2505\\Service Novigrad\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\Service Novigrad\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "17",
+                        "startOffsets": "16",
                         "endColumns": "58",
-                        "endOffsets": "71"
+                        "endOffsets": "70"
                     },
                     "to": {
                         "startLines": "2",
