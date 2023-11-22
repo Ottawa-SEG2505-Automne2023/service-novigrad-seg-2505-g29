@@ -9,11 +9,11 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.WAKE_LOCK" />
 13-->[com.google.android.gms:play-services-measurement-api:21.4.0] C:\Users\gabri\.gradle\caches\transforms-3\0557892e4a9e1095f1d3cd4e1b0ca1f4\transformed\play-services-measurement-api-21.4.0\AndroidManifest.xml:24:5-68
 13-->[com.google.android.gms:play-services-measurement-api:21.4.0] C:\Users\gabri\.gradle\caches\transforms-3\0557892e4a9e1095f1d3cd4e1b0ca1f4\transformed\play-services-measurement-api-21.4.0\AndroidManifest.xml:24:22-65
@@ -36,85 +36,85 @@
 21-->[androidx.core:core:1.13.0-alpha01] C:\Users\gabri\.gradle\caches\transforms-3\538aaed90b3f403c6aae42d19e885dcc\transformed\core-1.13.0-alpha01\AndroidManifest.xml:26:22-94
 22
 23    <application
-23-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:8:5-49:19
+23-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:8:5-49:19
 24        android:allowBackup="true"
-24-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:9:9-35
+24-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:9:9-35
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 25-->[androidx.core:core:1.13.0-alpha01] C:\Users\gabri\.gradle\caches\transforms-3\538aaed90b3f403c6aae42d19e885dcc\transformed\core-1.13.0-alpha01\AndroidManifest.xml:28:18-86
 26        android:dataExtractionRules="@xml/data_extraction_rules"
-26-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:10:9-65
+26-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:10:9-65
 27        android:debuggable="true"
 28        android:extractNativeLibs="false"
 29        android:fullBackupContent="@xml/backup_rules"
-29-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:11:9-54
+29-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:11:9-54
 30        android:icon="@mipmap/ic_launcher"
-30-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:12:9-43
+30-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:12:9-43
 31        android:label="@string/app_name"
-31-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:13:9-41
+31-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:13:9-41
 32        android:roundIcon="@mipmap/ic_launcher_round"
-32-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:14:9-54
+32-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:14:9-54
 33        android:supportsRtl="true"
-33-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:15:9-35
+33-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:15:9-35
 34        android:testOnly="true"
 35        android:theme="@style/Theme.Project" >
-35-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:16:9-45
+35-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:16:9-45
 36        <activity
-36-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:18:9-20:40
+36-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:18:9-20:40
 37            android:name="com.example.project.AdminManageBranches"
-37-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:19:13-48
+37-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:19:13-48
 38            android:exported="false" />
-38-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:20:13-37
+38-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:20:13-37
 39        <activity
-39-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:21:9-23:40
+39-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:21:9-23:40
 40            android:name="com.example.project.AdminManageUsers"
-40-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:22:13-45
+40-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:22:13-45
 41            android:exported="false" />
-41-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:23:13-37
+41-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:23:13-37
 42        <activity
-42-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:24:9-26:40
+42-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:24:9-26:40
 43            android:name="com.example.project.AdminManageServices"
-43-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:25:13-48
+43-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:25:13-48
 44            android:exported="false" />
-44-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:26:13-37
+44-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:26:13-37
 45        <activity
-45-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:27:9-29:40
+45-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:27:9-29:40
 46            android:name="com.example.project.SignupActivity"
-46-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:28:13-43
+46-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:28:13-43
 47            android:exported="false" />
-47-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:29:13-37
+47-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:29:13-37
 48        <activity
-48-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:30:9-32:39
+48-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:30:9-32:39
 49            android:name="com.example.project.AdminHomepage"
-49-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:31:13-42
+49-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:31:13-42
 50            android:exported="true" />
-50-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:32:13-36
+50-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:32:13-36
 51        <activity
-51-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:33:9-35:39
+51-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:33:9-35:39
 52            android:name="com.example.project.Homepage"
-52-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:34:13-37
+52-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:34:13-37
 53            android:exported="true" />
-53-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:35:13-36
+53-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:35:13-36
 54        <activity android:name="com.example.project.ServiceDetail" />
-54-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:37:9-50
-54-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:37:19-48
+54-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:37:9-50
+54-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:37:19-48
 55        <activity android:name="com.example.project.ServiceManager" />
-55-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:39:9-51
-55-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:39:19-49
+55-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:39:9-51
+55-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:39:19-49
 56        <activity
-56-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:40:9-48:20
+56-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:40:9-48:20
 57            android:name="com.example.project.LoginActivity"
-57-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:41:13-42
+57-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:41:13-42
 58            android:exported="true" >
-58-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:42:13-36
+58-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:42:13-36
 59            <intent-filter>
-59-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:43:13-47:29
+59-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:43:13-47:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:44:17-69
-60-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:44:25-66
+60-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:44:17-69
+60-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:44:25-66
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:46:17-77
-62-->C:\Users\gabri\Desktop\Service Novigrad\app\src\main\AndroidManifest.xml:46:27-74
+62-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:46:17-77
+62-->C:\Users\gabri\Documents\GitHub\service-novigrad-seg-2505-g29\Service Novigrad\app\src\main\AndroidManifest.xml:46:27-74
 63            </intent-filter>
 64        </activity>
 65        <activity
