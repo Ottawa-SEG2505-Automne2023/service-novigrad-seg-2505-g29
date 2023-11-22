@@ -43,7 +43,7 @@ public class AdminManageServices extends AppCompatActivity {
         setContentView(R.layout.activity_admin_manage_services);
 
         // Liste des services (exemple)
-        databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference("services");
 
 
         // ListView
