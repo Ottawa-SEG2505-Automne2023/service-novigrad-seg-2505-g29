@@ -46,7 +46,7 @@
             android:name="com.example.project.SignupActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.project.LoginActivity"
+            android:name="com.example.project.AdminHomepage"
             android:exported="true" />
         <activity
             android:name="com.example.project.Homepage"
@@ -54,7 +54,7 @@
         <activity android:name="com.example.project.ServiceDetail" />
         <activity android:name="com.example.project.ServiceManager" />
         <activity
-            android:name="com.example.project.AdminHomepage"
+            android:name="com.example.project.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
