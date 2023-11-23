@@ -12,11 +12,9 @@ import java.util.List;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
+
 public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-    }
 
     @Test
     public void checkServiceName() {
@@ -39,6 +37,26 @@ public class ExampleUnitTest {
         ArrayList<String> docs = new ArrayList<String>();
         docs.add("Driver License");
         Service service = new Service("",new ArrayList<String>(), docs);
+        assertEquals(docs, service.getRequiredDocuments());
+    }
+    @Test
+    public void  checkServiceFormFieldsSetters() {
+        ArrayList<String> formFields = new ArrayList<String>();
+        formFields.add("First Name :");
+        formFields.add("Last Name :");
+        formFields.add("Phone Number :");
+        formFields.add("Adress :");
+        Service service = new Service("",new ArrayList<String>(), new ArrayList<String>());
+        service.setFormFields(formFields);
+        assertEquals(formFields, service.getFormFields());
+    }
+
+    @Test
+    public void  checkServiceDocumentSetters() {
+        ArrayList<String> docs = new ArrayList<String>();
+        docs.add("Driver License");
+        Service service = new Service("",new ArrayList<String>(), new ArrayList<String>());
+        service.setRequiredDocuments(docs);
         assertEquals(docs, service.getRequiredDocuments());
     }
 }

@@ -53,5 +53,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.4.1"))
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-database")
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-library:1.3'
 
 }
