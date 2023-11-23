@@ -25,7 +25,7 @@ public class AdminManageBranches extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_manage_branches);
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("branches");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -59,7 +59,7 @@ public class AdminManageBranches extends AppCompatActivity {
 // Après la suppression, réaffichez la liste mise à jour sur votre layout
 
             public void deleteAccount(Account accountToDelete) {
-                DatabaseReference accountRef = FirebaseDatabase.getInstance().getReference("users")
+                DatabaseReference accountRef = FirebaseDatabase.getInstance().getReference("branches")
                         .child(accountToDelete.getFirstName());
                 accountRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
