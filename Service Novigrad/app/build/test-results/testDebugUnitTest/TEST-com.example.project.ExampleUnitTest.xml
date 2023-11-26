@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.ExampleUnitTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-11-23T03:42:38" hostname="LAPTOP-SHGQKFRK" time="0.012">
+<testsuite name="com.example.project.ExampleUnitTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-11-26T04:49:11" hostname="LAPTOP-SHGQKFRK" time="0.048">
   <properties/>
-  <testcase name="checkServiceDocuments" classname="com.example.project.ExampleUnitTest" time="0.008"/>
-  <testcase name="checkServiceFormFieldsSetters" classname="com.example.project.ExampleUnitTest" time="0.002"/>
+  <testcase name="checkServiceDocuments" classname="com.example.project.ExampleUnitTest" time="0.042"/>
+  <testcase name="checkServiceFormFieldsSetters" classname="com.example.project.ExampleUnitTest" time="0.001"/>
   <testcase name="checkServiceDocumentSetters" classname="com.example.project.ExampleUnitTest" time="0.001"/>
   <testcase name="checkServiceName" classname="com.example.project.ExampleUnitTest" time="0.0"/>
-  <testcase name="checkServiceFormFields" classname="com.example.project.ExampleUnitTest" time="0.0"/>
+  <testcase name="checkServiceFormFields" classname="com.example.project.ExampleUnitTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

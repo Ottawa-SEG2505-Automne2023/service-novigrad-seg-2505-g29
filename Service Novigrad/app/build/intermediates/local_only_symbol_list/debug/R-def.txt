@@ -17,6 +17,7 @@ id btnManageServices
 id btnManageUsers
 id buttonAddDocument
 id buttonAddFormField
+id buttonAddService
 id buttonCreateService
 id buttonCreateServiceType
 id buttonDeleteService
@@ -30,6 +31,7 @@ id inputPassword
 id inputPasswordConfirm
 id linearLayoutDocuments
 id linearLayoutFormFields
+id listViewAvailableServices
 id listViewServices
 id sign
 id switchToSignin
@@ -37,13 +39,16 @@ id switchToSignup
 id textView
 id textView2
 id textView3
+id textViewAvailableServices
 id textViewServiceName
 id userRadioButton
 id welcomeMessage
+layout activity_add_service
 layout activity_admin_homepage
 layout activity_admin_manage_branches
 layout activity_admin_manage_services
 layout activity_admin_manage_users
+layout activity_employee_homepage
 layout activity_login
 layout activity_main
 layout activity_signup

@@ -3212,6 +3212,7 @@ id btnManageServices
 id btnManageUsers
 id buttonAddDocument
 id buttonAddFormField
+id buttonAddService
 id buttonCreateService
 id buttonCreateServiceType
 id buttonDeleteService
@@ -3369,6 +3370,7 @@ id linear
 id linearLayoutDocuments
 id linearLayoutFormFields
 id listMode
+id listViewAvailableServices
 id listViewServices
 id list_item
 id m3_side_sheet
@@ -3585,6 +3587,7 @@ id textTop
 id textView
 id textView2
 id textView3
+id textViewAvailableServices
 id textViewServiceName
 id text_input_end_icon
 id text_input_error_icon
@@ -3752,10 +3755,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_service
 layout activity_admin_homepage
 layout activity_admin_manage_branches
 layout activity_admin_manage_services
 layout activity_admin_manage_users
+layout activity_employee_homepage
 layout activity_login
 layout activity_main
 layout activity_signup

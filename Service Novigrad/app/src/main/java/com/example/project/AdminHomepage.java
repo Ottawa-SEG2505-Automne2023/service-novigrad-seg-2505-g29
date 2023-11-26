@@ -15,7 +15,7 @@ public class AdminHomepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_homepage);
-        FirebaseApp.initializeApp(this);
+
 
         // Variables
         Button btnManageServices = findViewById(R.id.btnManageServices);

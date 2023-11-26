@@ -26,6 +26,5 @@
         android:layout_height="wrap_content"
         android:text="Employee Homepage"
         android:layout_centerHorizontal="true"
-
         android:layout_marginTop="16dp" />
 </RelativeLayout>
