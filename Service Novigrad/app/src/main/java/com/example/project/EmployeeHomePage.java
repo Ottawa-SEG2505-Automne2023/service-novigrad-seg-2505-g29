@@ -44,6 +44,7 @@ public class EmployeeHomePage extends AppCompatActivity {
                 // Launch activity to add a service
                 Intent intent = new Intent(EmployeeHomePage.this, AddService.class);
                 intent.putExtra("AVAILABLE_SERVICES", availableServices);
+                intent.putExtra("EMPLOYEE_NAME", availableServices);
                 startActivityForResult(intent, REQUEST_ADD_SERVICE);
             }
         });
