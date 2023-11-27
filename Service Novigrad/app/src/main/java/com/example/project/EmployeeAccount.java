@@ -8,7 +8,7 @@ import java.util.List;
 public class EmployeeAccount extends Account{
 
     List<Service> offeredServices;
-    private String name;
+
     public EmployeeAccount(){
     }
     public EmployeeAccount(String firstName, String lastName, String email, String password) {
