@@ -1,12 +1,13 @@
 package com.example.project;
 
+import java.util.List;
+
 public abstract class Account {
 
     String firstName;
     String lastName;
     String email;
     String password;
-
 
     void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -33,6 +34,7 @@ public abstract class Account {
     public String getPassword() {
         return password;
     }
+
 
 
     //test pour github

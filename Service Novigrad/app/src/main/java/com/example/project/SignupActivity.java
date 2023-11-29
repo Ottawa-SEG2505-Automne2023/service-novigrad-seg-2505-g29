@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class SignupActivity extends AppCompatActivity {
 
     EditText inputFirstName;
@@ -89,8 +91,8 @@ public class SignupActivity extends AppCompatActivity {
 
                     } else if (employeeRadioButton.isChecked()) {
                         DatabaseReference newEmployeeAccount = firebaseDatabase.getReference("Employee accounts/");
-                        EmployeeAccount newEmployee = new EmployeeAccount(firstName, lastName, email, password);
-                        newEmployeeAccount.child(email).setValue(newEmployee);
+                        EmployeeAccount newEmployee = new EmployeeAccount(firstName, lastName, email, password, new ArrayList<Service>());
+                        newEmployeeAccount.child(email).setValue(newEmployee.toMap());
                     }
                     Toast.makeText(SignupActivity.this, "Account created successfully", Toast.LENGTH_SHORT).show();
                     finish();

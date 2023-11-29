@@ -34,6 +34,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Project" >
         <activity
+            android:name="com.example.project.EmployeeHomepage"
+            android:exported="false" />
+        <activity
             android:name="com.example.project.AdminManageBranches"
             android:exported="false" />
         <activity
@@ -51,6 +54,8 @@
         <activity
             android:name="com.example.project.Homepage"
             android:exported="true" />
+        <activity android:name="com.example.project.EmployeeManageServices" />
+        <activity android:name="com.example.project.AddService" />
         <activity android:name="com.example.project.ServiceDetail" />
         <activity android:name="com.example.project.ServiceManager" />
         <activity

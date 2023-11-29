@@ -59,4 +59,26 @@ public class ExampleUnitTest {
         service.setRequiredDocuments(docs);
         assertEquals(docs, service.getRequiredDocuments());
     }
+
+    @Test
+    public void CheckOfferedServicesGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ArrayList<Service> services = new ArrayList<>();
+        services.add(service);
+        EmployeeAccount employee = new EmployeeAccount("1","2","3","4";
+        employee.addOfferedService(service);
+        assertEquals(services, employee.getOfferedServices());
+    }
+
+    @Test
+    public void CheckOfferedServicesRemover()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ArrayList<Service> services = new ArrayList<>();
+        EmployeeAccount employee = new EmployeeAccount("1","2","3","4");
+        employee.addOfferedService(service);
+        employee.removeOfferedService(service);
+        assertEquals(services, employee.getOfferedServices());
+    }
 }
