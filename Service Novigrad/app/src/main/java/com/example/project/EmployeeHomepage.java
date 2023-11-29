@@ -32,5 +32,15 @@ public class EmployeeHomepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //ouvre la page pour voir le profil de la branche
+        btnManageBranchProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EmployeeHomepage.this, EmployeeBranchProfile.class);
+                intent.putExtra("EMAIL", email);
+                startActivity(intent);
+            }
+        });
     }
 }

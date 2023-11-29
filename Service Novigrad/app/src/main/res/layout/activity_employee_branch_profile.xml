@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EmployeeBranchProfile">
+
+    <TextView
+        android:id="@+id/txtBranchAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adresse :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBranchName"
+        app:layout_constraintBottom_toTopOf="@id/txtBranchAdresseDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtBranchPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBranchAdresseDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtBranchPhoneNumberDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtBranchAdresseDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@id/txtBranchPhoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBranchAdresseDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtBranchPhoneNumberDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBranchPhoneNumber"
+        app:layout_constraintBottom_toTopOf="@id/txtMondayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtBranchName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtBranchAdresse"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtMondayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday Hours :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBranchPhoneNumberDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtMondayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtMondayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMondayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtTuesdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtTuesdayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday Hours :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMondayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtTuesdayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtTuesdayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTuesdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtWednesdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtWednesdayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday Hours :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTuesdayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtWednesdayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtWednesdayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWednesdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtThursdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtThursdayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday Hours :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWednesdayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtThursdayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtThursdayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtThursdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtFridayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtFridayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday Hours :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtThursdayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtFridayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtFridayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFridayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtSaturdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtSaturdayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saturday Hours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFridayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtSaturdayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtSaturdayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSaturdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtSundayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtSundayHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SundayHours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSaturdayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/txtSundayHoursDisplay"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtSundayHoursDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSaturdayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/btnEditBranchProfile"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnEditBranchProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Branch Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSundayHoursDisplay"
+        app:layout_constraintBottom_toTopOf="@id/btnReturnToHomepage"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnReturnToHomepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return To Homepage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEditBranchProfile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
