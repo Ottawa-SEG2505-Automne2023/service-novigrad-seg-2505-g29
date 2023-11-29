@@ -37,6 +37,7 @@
             android:name=".Homepage"
             android:exported="true" />
         <activity android:name=".EmployeeManageServices" />
+        <activity android:name=".AddService" />
         <activity android:name=".ServiceDetail" />
         <activity android:name=".ServiceManager" />
         <activity

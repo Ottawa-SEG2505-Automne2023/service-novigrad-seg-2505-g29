@@ -38,7 +38,8 @@ import java.util.ArrayList;
 
             // Assuming you pass the employee object from the previous activity
             Intent intent = getIntent();
-            String email = intent.getStringExtra("EMPLOYEE_EMAIL");
+            String email = intent.getStringExtra("EMAIL");
+
 
             // Populate the available services from Firebase
             DatabaseReference servicesRef = FirebaseDatabase.getInstance().getReference("services");
@@ -70,14 +71,14 @@ import java.util.ArrayList;
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     // Add the selected service to the employee's offered services
                     Service selectedService = availableServices.get(position);
-                    DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("EmployeeAccounts");
+                    DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
+
                     Query query = employeeRef.orderByChild("email").equalTo(email);
                     query.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                 EmployeeAccount employee = snapshot.getValue(EmployeeAccount.class);
-
                                 // Check if the employee is found
                                 if (employee != null) {
                                     // Add the selected service to the employee's offered services
@@ -87,6 +88,7 @@ import java.util.ArrayList;
                                         Toast.makeText(AddService.this, "Service added: " + selectedService.getName(), Toast.LENGTH_SHORT).show();
                                         // Update the employee data in the database
                                         snapshot.getRef().setValue(employee);
+                                        finish();
                                     } else {
                                         // Service is already offered by the employee
                                         Toast.makeText(AddService.this, "You already offer this service.", Toast.LENGTH_SHORT).show();
@@ -107,7 +109,17 @@ import java.util.ArrayList;
 
         private void updateListView() {
             ListView listViewAvailableServices = findViewById(R.id.listViewAvailableServices);
-            ArrayAdapter<Service> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, availableServices);
+
+            // Create a list of service names
+            ArrayList<String> serviceNames = new ArrayList<>();
+            for (Service service : availableServices) {
+                serviceNames.add(service.getName());
+            }
+
+            // Use the list of service names to create the ArrayAdapter
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, serviceNames);
+
+            // Set the adapter for the ListView
             listViewAvailableServices.setAdapter(adapter);
         }
     }

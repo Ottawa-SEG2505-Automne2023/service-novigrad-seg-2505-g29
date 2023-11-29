@@ -3207,6 +3207,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnCreateAccount
 id btnLogin
+id btnManageBranchProfile
 id btnManageBranches
 id btnManageServices
 id btnManageUsers
@@ -3761,6 +3762,7 @@ layout activity_admin_manage_branches
 layout activity_admin_manage_services
 layout activity_admin_manage_users
 layout activity_employee_homepage
+layout activity_employee_manage_services
 layout activity_login
 layout activity_main
 layout activity_signup

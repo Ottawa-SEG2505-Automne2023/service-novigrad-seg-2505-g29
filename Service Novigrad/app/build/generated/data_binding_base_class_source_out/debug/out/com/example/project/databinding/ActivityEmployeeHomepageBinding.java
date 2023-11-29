@@ -5,11 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.project.R;
@@ -19,29 +18,29 @@ import java.lang.String;
 
 public final class ActivityEmployeeHomepageBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button buttonAddService;
+  public final Button btnManageBranchProfile;
 
   @NonNull
-  public final ListView listViewServices;
+  public final Button btnManageServices;
 
   @NonNull
   public final TextView textView;
 
-  private ActivityEmployeeHomepageBinding(@NonNull RelativeLayout rootView,
-      @NonNull Button buttonAddService, @NonNull ListView listViewServices,
+  private ActivityEmployeeHomepageBinding(@NonNull ConstraintLayout rootView,
+      @NonNull Button btnManageBranchProfile, @NonNull Button btnManageServices,
       @NonNull TextView textView) {
     this.rootView = rootView;
-    this.buttonAddService = buttonAddService;
-    this.listViewServices = listViewServices;
+    this.btnManageBranchProfile = btnManageBranchProfile;
+    this.btnManageServices = btnManageServices;
     this.textView = textView;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -66,15 +65,15 @@ public final class ActivityEmployeeHomepageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.buttonAddService;
-      Button buttonAddService = ViewBindings.findChildViewById(rootView, id);
-      if (buttonAddService == null) {
+      id = R.id.btnManageBranchProfile;
+      Button btnManageBranchProfile = ViewBindings.findChildViewById(rootView, id);
+      if (btnManageBranchProfile == null) {
         break missingId;
       }
 
-      id = R.id.listViewServices;
-      ListView listViewServices = ViewBindings.findChildViewById(rootView, id);
-      if (listViewServices == null) {
+      id = R.id.btnManageServices;
+      Button btnManageServices = ViewBindings.findChildViewById(rootView, id);
+      if (btnManageServices == null) {
         break missingId;
       }
 
@@ -84,8 +83,8 @@ public final class ActivityEmployeeHomepageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityEmployeeHomepageBinding((RelativeLayout) rootView, buttonAddService,
-          listViewServices, textView);
+      return new ActivityEmployeeHomepageBinding((ConstraintLayout) rootView,
+          btnManageBranchProfile, btnManageServices, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

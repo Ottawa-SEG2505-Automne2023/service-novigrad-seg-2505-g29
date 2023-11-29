@@ -40,9 +40,11 @@ public class EmployeeManageServices extends AppCompatActivity {
         // Assuming you have a ListView in your layout with the id "listViewOfferedServices"
         ListView listViewOfferedServices = findViewById(R.id.listViewServices);
         String email = intent.getStringExtra("EMAIL");
+        offeredServices = intent.getParcelableArrayListExtra("OfferedServices");
+
 
         // Adapter for displaying offered services
-         offeredServicesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, offeredServices);
+        offeredServicesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, offeredServices);
         listViewOfferedServices.setAdapter(offeredServicesAdapter);
 
         // Assuming you have a Button in your layout with the id "buttonAddService"
@@ -54,12 +56,12 @@ public class EmployeeManageServices extends AppCompatActivity {
             public void onClick(View v) {
                 // Launch activity to add a service
                 Intent intent = new Intent(EmployeeManageServices.this, AddService.class);
-                intent.putExtra("EMPLOYEE_EMAIL", email);
+                intent.putExtra("EMAIL", email);
                 startActivityForResult(intent, REQUEST_ADD_SERVICE);
             }
         });
 
-        DatabaseReference employeesRef = FirebaseDatabase.getInstance().getReference("EmployeeAccounts");
+        DatabaseReference employeesRef = FirebaseDatabase.getInstance().getReference("Employee Accounts/");
         Query query = employeesRef.orderByChild("email").equalTo(email);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -67,6 +69,7 @@ public class EmployeeManageServices extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     EmployeeAccount employee = snapshot.getValue(EmployeeAccount.class);
                     if (employee != null) {
+                        Toast.makeText(EmployeeManageServices.this, "Error: ", Toast.LENGTH_SHORT).show();
                         // Set the employee object here
                         employee2 = employee;
 
@@ -130,8 +133,7 @@ public class EmployeeManageServices extends AppCompatActivity {
     }private void deleteOfferedService(int position) {
         Service deletedService = offeredServices.get(position);
         offeredServices.remove(deletedService);
-        offeredServicesAdapter.notifyDataSetChanged();
-        DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("EmployeeAccounts");
+        DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
 
         // Find the specific employee by email
         Query query = employeeRef.orderByChild("email").equalTo(employee2.getEmail());
@@ -153,5 +155,6 @@ public class EmployeeManageServices extends AppCompatActivity {
                 Toast.makeText(EmployeeManageServices.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+        offeredServicesAdapter.notifyDataSetChanged();
     }
 }
