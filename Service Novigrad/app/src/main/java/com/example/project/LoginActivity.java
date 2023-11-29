@@ -6,11 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -101,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if(snapshot.hasChild(email)){
                                     String getPassword = snapshot.child(email).child("password").getValue(String.class);
                                     if (password.equals(getPassword)) { // if succesful, move to hompage with a welcome message
-                                        Intent intent = new Intent(LoginActivity.this, EmployeeHomePage.class);
+                                        Intent intent = new Intent(LoginActivity.this, EmployeeManageServices.class);
                                         intent.putExtra("EMAIL", email);
                                         intent.putExtra("name", snapshot.child(email).child("firstName").getValue(String.class));
                                         startActivity(intent);

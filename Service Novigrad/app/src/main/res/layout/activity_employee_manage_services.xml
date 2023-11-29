@@ -8,10 +8,11 @@
         android:id="@+id/listViewServices"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
+        android:layout_above="@+id/buttonAddService"
         android:layout_marginTop="30dp"
-        android:layout_above="@+id/buttonAddService"/>
+        android:layout_marginBottom="-20dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
 
     <Button
         android:id="@+id/buttonAddService"

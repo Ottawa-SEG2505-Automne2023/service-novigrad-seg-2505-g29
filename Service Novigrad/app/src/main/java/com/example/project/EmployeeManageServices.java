@@ -1,6 +1,5 @@
 package com.example.project;
 
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class EmployeeHomePage extends AppCompatActivity {
+public class EmployeeManageServices extends AppCompatActivity {
 
     private ArrayList<Service> offeredServices = new ArrayList<>();
 
@@ -35,7 +34,7 @@ public class EmployeeHomePage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_employee_homepage);
+        setContentView(R.layout.activity_employee_manage_services);
         Intent intent = getIntent();
 
         // Assuming you have a ListView in your layout with the id "listViewOfferedServices"
@@ -54,7 +53,7 @@ public class EmployeeHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Launch activity to add a service
-                Intent intent = new Intent(EmployeeHomePage.this, AddService.class);
+                Intent intent = new Intent(EmployeeManageServices.this, AddService.class);
                 intent.putExtra("EMPLOYEE_EMAIL", email);
                 startActivityForResult(intent, REQUEST_ADD_SERVICE);
             }
@@ -81,7 +80,7 @@ public class EmployeeHomePage extends AppCompatActivity {
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(EmployeeHomePage.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(EmployeeManageServices.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -145,13 +144,13 @@ public class EmployeeHomePage extends AppCompatActivity {
                     // Update the employee data in the database
                     snapshot.getRef().setValue(employee2);
                     // Notify the user or perform additional actions if needed
-                    Toast.makeText(EmployeeHomePage.this, "Service deleted: " + deletedService.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EmployeeManageServices.this, "Service deleted: " + deletedService.getName(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(EmployeeHomePage.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(EmployeeManageServices.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
