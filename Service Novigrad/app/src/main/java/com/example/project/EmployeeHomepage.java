@@ -21,6 +21,7 @@ public class EmployeeHomepage extends AppCompatActivity {
         //Variables
         Button btnManageServices = findViewById(R.id.btnManageServices);
         Button btnManageBranchProfile = findViewById(R.id.btnManageBranchProfile);
+        Button btnViewServiceRequests = findViewById(R.id.btnViewServiceRequests);
         email = intent.getStringExtra("EMAIL");
         //ouvre la page pour ajouter un service
         btnManageServices.setOnClickListener(new View.OnClickListener() {
