@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class EmployeeHomepage extends AppCompatActivity {
 
+    String email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,15 +21,13 @@ public class EmployeeHomepage extends AppCompatActivity {
         //Variables
         Button btnManageServices = findViewById(R.id.btnManageServices);
         Button btnManageBranchProfile = findViewById(R.id.btnManageBranchProfile);
-        String email = intent.getStringExtra("EMAIL");
-        ArrayList<Service> offeredServices = intent.getParcelableArrayListExtra("OfferedServices");
+        email = intent.getStringExtra("EMAIL");
         //ouvre la page pour ajouter un service
         btnManageServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EmployeeHomepage.this, EmployeeManageServices.class);
                 intent.putExtra("EMAIL", email);
-                intent.putParcelableArrayListExtra("OfferedServices", offeredServices);
                 startActivity(intent);
             }
         });

@@ -39,6 +39,7 @@ import java.util.ArrayList;
             // Assuming you pass the employee object from the previous activity
             Intent intent = getIntent();
             String email = intent.getStringExtra("EMAIL");
+            Toast.makeText(AddService.this, email, Toast.LENGTH_SHORT).show();
 
 
             // Populate the available services from Firebase
@@ -88,6 +89,9 @@ import java.util.ArrayList;
                                         Toast.makeText(AddService.this, "Service added: " + selectedService.getName(), Toast.LENGTH_SHORT).show();
                                         // Update the employee data in the database
                                         snapshot.getRef().setValue(employee);
+                                        Intent resultIntent = new Intent();
+                                        resultIntent.putExtra("ADDED_SERVICE", selectedService);
+                                        setResult(RESULT_OK, resultIntent);
                                         finish();
                                     } else {
                                         // Service is already offered by the employee

@@ -102,7 +102,6 @@ public class LoginActivity extends AppCompatActivity {
                                     if (password.equals(getPassword)) { // if succesful, move to hompage with a welcome message
                                         Intent intent = new Intent(LoginActivity.this, EmployeeHomepage.class);
                                         intent.putExtra("EMAIL", email);
-                                        intent.putParcelableArrayListExtra("OfferedServices", snapshot.child(email).child("offeredServices").getValue(ArrayList.class));
                                         intent.putExtra("name", snapshot.child(email).child("firstName").getValue(String.class));
                                         startActivity(intent);
                                     }

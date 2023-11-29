@@ -30,7 +30,7 @@ public class EmployeeManageServices extends AppCompatActivity {
 
     private static final int REQUEST_ADD_SERVICE = 1;
     EmployeeAccount employee2;
-    ArrayAdapter<Service>    offeredServicesAdapter;
+    ArrayAdapter<String>    offeredServicesAdapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +40,10 @@ public class EmployeeManageServices extends AppCompatActivity {
         // Assuming you have a ListView in your layout with the id "listViewOfferedServices"
         ListView listViewOfferedServices = findViewById(R.id.listViewServices);
         String email = intent.getStringExtra("EMAIL");
-        offeredServices = intent.getParcelableArrayListExtra("OfferedServices");
 
 
         // Adapter for displaying offered services
-        offeredServicesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, offeredServices);
+        offeredServicesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>());
         listViewOfferedServices.setAdapter(offeredServicesAdapter);
 
         // Assuming you have a Button in your layout with the id "buttonAddService"
@@ -61,7 +60,7 @@ public class EmployeeManageServices extends AppCompatActivity {
             }
         });
 
-        DatabaseReference employeesRef = FirebaseDatabase.getInstance().getReference("Employee Accounts/");
+        DatabaseReference employeesRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
         Query query = employeesRef.orderByChild("email").equalTo(email);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -69,15 +68,13 @@ public class EmployeeManageServices extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     EmployeeAccount employee = snapshot.getValue(EmployeeAccount.class);
                     if (employee != null) {
-                        Toast.makeText(EmployeeManageServices.this, "Error: ", Toast.LENGTH_SHORT).show();
                         // Set the employee object here
                         employee2 = employee;
 
                         // Retrieve offered services from the employee object
                         offeredServices.clear();
                         offeredServices.addAll(employee.getOfferedServices());
-                        // Notify the adapter
-                        offeredServicesAdapter.notifyDataSetChanged();
+                        updateListView();
                     }
                 }
             }
@@ -109,10 +106,12 @@ public class EmployeeManageServices extends AppCompatActivity {
             if (addedService != null) {
                 // Update the offered services list and notify the adapter
                 offeredServices.add(addedService);
+                updateListView();
 
             }
         }
-    }   private void showConfirmationDialog(int position) {
+    }
+    private void showConfirmationDialog(int position) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Confirm Deletion");
         builder.setMessage("Do you want to delete this service?");
@@ -145,6 +144,7 @@ public class EmployeeManageServices extends AppCompatActivity {
                     employee2.removeOfferedService(deletedService);
                     // Update the employee data in the database
                     snapshot.getRef().setValue(employee2);
+                    updateListView();
                     // Notify the user or perform additional actions if needed
                     Toast.makeText(EmployeeManageServices.this, "Service deleted: " + deletedService.getName(), Toast.LENGTH_SHORT).show();
                 }
@@ -155,6 +155,21 @@ public class EmployeeManageServices extends AppCompatActivity {
                 Toast.makeText(EmployeeManageServices.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+        offeredServicesAdapter.notifyDataSetChanged();
+    }
+
+    private void updateListView() {
+        // Create a list of service names
+        ArrayList<String> serviceNames = new ArrayList<>();
+        for (Service service : offeredServices) {
+            if(!service.getName().equals("Default")) {
+                serviceNames.add(service.getName());
+            }
+        }
+
+        // Use the list of service names to update the ArrayAdapter
+        offeredServicesAdapter.clear();
+        offeredServicesAdapter.addAll(serviceNames);
         offeredServicesAdapter.notifyDataSetChanged();
     }
 }
