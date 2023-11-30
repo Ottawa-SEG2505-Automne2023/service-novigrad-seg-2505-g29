@@ -21,12 +21,23 @@ public class EmployeeHomepage extends AppCompatActivity {
         //Variables
         Button btnManageServices = findViewById(R.id.btnManageServices);
         Button btnManageBranchProfile = findViewById(R.id.btnManageBranchProfile);
+        Button btnViewServiceRequests = findViewById(R.id.btnViewServiceRequests);
         email = intent.getStringExtra("EMAIL");
         //ouvre la page pour ajouter un service
         btnManageServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EmployeeHomepage.this, EmployeeManageServices.class);
+                intent.putExtra("EMAIL", email);
+                startActivity(intent);
+            }
+        });
+
+        //ouvre la page pour voir le profil de la branche
+        btnManageBranchProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EmployeeHomepage.this, EmployeeBranchProfile.class);
                 intent.putExtra("EMAIL", email);
                 startActivity(intent);
             }
