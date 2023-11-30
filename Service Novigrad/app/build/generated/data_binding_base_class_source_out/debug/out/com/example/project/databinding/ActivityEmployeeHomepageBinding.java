@@ -27,14 +27,18 @@ public final class ActivityEmployeeHomepageBinding implements ViewBinding {
   public final Button btnManageServices;
 
   @NonNull
+  public final Button btnViewServiceRequests;
+
+  @NonNull
   public final TextView textView;
 
   private ActivityEmployeeHomepageBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnManageBranchProfile, @NonNull Button btnManageServices,
-      @NonNull TextView textView) {
+      @NonNull Button btnViewServiceRequests, @NonNull TextView textView) {
     this.rootView = rootView;
     this.btnManageBranchProfile = btnManageBranchProfile;
     this.btnManageServices = btnManageServices;
+    this.btnViewServiceRequests = btnViewServiceRequests;
     this.textView = textView;
   }
 
@@ -77,6 +81,12 @@ public final class ActivityEmployeeHomepageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnViewServiceRequests;
+      Button btnViewServiceRequests = ViewBindings.findChildViewById(rootView, id);
+      if (btnViewServiceRequests == null) {
+        break missingId;
+      }
+
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -84,7 +94,7 @@ public final class ActivityEmployeeHomepageBinding implements ViewBinding {
       }
 
       return new ActivityEmployeeHomepageBinding((ConstraintLayout) rootView,
-          btnManageBranchProfile, btnManageServices, textView);
+          btnManageBranchProfile, btnManageServices, btnViewServiceRequests, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

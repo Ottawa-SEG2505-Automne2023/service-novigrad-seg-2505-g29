@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.project.app-mergeDebugResources-39:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "com.example.project.app-mergeDebugResources-3:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Daali Othmane\\OneDrive\\Documents\\GitHub\\service-novigrad-seg-2505-g29\\Service Novigrad\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "source": "C:\\University\\Fall 2023\\SEG2505\\Service Novigrad\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "16",
+                        "startOffsets": "17",
                         "endColumns": "57",
-                        "endOffsets": "69"
+                        "endOffsets": "70"
                     },
                     "to": {
                         "startLines": "2",

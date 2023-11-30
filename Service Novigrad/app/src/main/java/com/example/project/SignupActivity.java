@@ -56,12 +56,12 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
+
                 String firstName = inputFirstName.getText().toString();
                 String lastName = inputLastName.getText().toString();
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
                 String passwordConfirm = inputPasswordConfirm.getText().toString();
-                //String userType = userSpinner.getSelectedItem().toString();
 
                 //Checks if all fields are filled out
                 if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || password.isEmpty() || passwordConfirm.isEmpty()) {
@@ -92,6 +92,7 @@ public class SignupActivity extends AppCompatActivity {
                     } else if (employeeRadioButton.isChecked()) {
                         DatabaseReference newEmployeeAccount = firebaseDatabase.getReference("Employee accounts/");
                         EmployeeAccount newEmployee = new EmployeeAccount(firstName, lastName, email, password, new ArrayList<Service>());
+                        System.out.println(newEmployee.toMap());
                         newEmployeeAccount.child(email).setValue(newEmployee.toMap());
                     }
                     Toast.makeText(SignupActivity.this, "Account created successfully", Toast.LENGTH_SHORT).show();

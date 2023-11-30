@@ -83,7 +83,7 @@ import java.util.ArrayList;
                                 // Check if the employee is found
                                 if (employee != null) {
                                     // Add the selected service to the employee's offered services
-                                    if (!employee.getOfferedServicesNames().contains(selectedService.getName())) {
+                                    if (!employee.getOfferedServices().contains(selectedService)) {
                                         employee.addOfferedService(selectedService);
                                         // Notify the user or perform additional actions if needed
                                         Toast.makeText(AddService.this, "Service added: " + selectedService.getName(), Toast.LENGTH_SHORT).show();

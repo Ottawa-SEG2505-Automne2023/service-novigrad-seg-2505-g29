@@ -9,37 +9,34 @@ import java.util.Map;
 
 public class EmployeeAccount extends Account{
 
-    public String adresse;
-    public int phoneNumber;
-    public String mondayHours;
-    public String tuesdayHours;
-    public String wednesdayHours;
-    public String thursdayHours;
-    public String fridayHours;
-    public String saturdayHours;
-    public String sundayHours;
+    public String branchAdresse = "";
+    public String branchPhoneNumber = "";
+    public String mondayOpenHours = "";
+    public String tuesdayOpenHours = "";
+    public String wednesdayOpenHours = "";
+    public String thursdayOpenHours = "";
+    public String fridayOpenHours = "";
+    public String saturdayOpenHours = "";
+    public String sundayOpenHours = "";
+    public String mondayCloseHours = "";
+    public String tuesdayCloseHours = "";
+    public String wednesdayCloseHours = "";
+    public String thursdayCloseHours = "";
+    public String fridayCloseHours = "";
+    public String saturdayCloseHours = "";
+    public String sundayCloseHours = "";
     List<Service> offeredServices;
 
 
     public EmployeeAccount(){
     }
-    public EmployeeAccount(String firstName, String lastName, String email, String password, List<Service> arrayList, String adresse, int phoneNumber, String mondayHours, String tuesdayHours, String wednesdayHours, String thursdayHours,
-                           String fridayHours, String saturdayHours, String sundayHours) {
+    public EmployeeAccount(String firstName, String lastName, String email, String password, List<Service> arrayList) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.offeredServices = new ArrayList<>();
         this.offeredServices.add(new Service("Default",new ArrayList<String>(), new ArrayList<String>()));
-       this.adresse = adresse;
-        this.phoneNumber = phoneNumber;
-        this.mondayHours = mondayHours;
-        this.tuesdayHours = tuesdayHours;
-        this.wednesdayHours = wednesdayHours;
-        this.thursdayHours = thursdayHours;
-        this.fridayHours = fridayHours;
-        this.saturdayHours = saturdayHours;
-        this.sundayHours = sundayHours;
     }
 
 
@@ -56,14 +53,6 @@ public class EmployeeAccount extends Account{
     // Get the list of offered services
     public List<Service> getOfferedServices() {
         return offeredServices;
-    }
-
-    public List<String> getOfferedServicesNames() {
-        ArrayList<String> servicesNames = new ArrayList<String>();
-        for(Service service : offeredServices){
-            servicesNames.add(service.getName());
-        }
-        return servicesNames;
     }
 
 
