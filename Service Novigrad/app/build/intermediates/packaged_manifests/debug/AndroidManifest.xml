@@ -65,6 +65,7 @@
         <activity android:name="com.example.project.ServiceDetail" />
         <activity android:name="com.example.project.ServiceManager" />
         <activity android:name="com.example.project.UserActivity" />
+        <activity android:name="com.example.project.EmployeeServicesActivity" />
         <activity android:name="com.example.project.UserActionsActivity" />
         <activity
             android:name="com.example.project.LoginActivity"

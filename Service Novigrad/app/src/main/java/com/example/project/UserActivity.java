@@ -45,7 +45,7 @@ public class UserActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Launch activity to perform actions with the selected employee
                 EmployeeAccount selectedEmployee = employeeAccounts.get(position);
-                Intent intent = new Intent(UserActivity.this, UserActionsActivity.class);
+                Intent intent = new Intent(UserActivity.this, EmployeeServicesActivity.class);
                 intent.putExtra("EMPLOYEE_EMAIL", selectedEmployee.getEmail());
                 startActivity(intent);
             }

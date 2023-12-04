@@ -47,6 +47,7 @@
         <activity android:name=".ServiceDetail" />
         <activity android:name=".ServiceManager" />
         <activity android:name=".UserActivity" />
+        <activity android:name=".EmployeeServicesActivity" />
         <activity android:name=".UserActionsActivity" />
         <activity
             android:name=".LoginActivity"
