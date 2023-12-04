@@ -79,18 +79,31 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtBranchPhoneNumberField"
-        app:layout_constraintBottom_toTopOf="@id/txtMondayHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtMondayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtMondayHoursField"
+        android:id="@+id/txtMondayOpenHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/txtMondayCloseHoursField"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMondayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtTuesdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtMondayCloseHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtMondayOpenHoursField"
         app:layout_constraintTop_toBottomOf="@id/txtMondayHours"
         app:layout_constraintBottom_toTopOf="@id/txtTuesdayHours"
         app:layout_constraintVertical_bias="0.5" />
@@ -103,19 +116,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtMondayHoursField"
-        app:layout_constraintBottom_toTopOf="@id/txtTuesdayHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtMondayOpenHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtTuesdayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtTuesdayHoursField"
+        android:id="@+id/txtTuesdayOpenHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/txtTuesdayCloseHoursField"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTuesdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtWednesdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtTuesdayCloseHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTuesdayOpenHoursField"
         app:layout_constraintTop_toBottomOf="@id/txtTuesdayHours"
         app:layout_constraintBottom_toTopOf="@id/txtWednesdayHours"
         app:layout_constraintVertical_bias="0.5" />
@@ -128,19 +154,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTuesdayHoursField"
-        app:layout_constraintBottom_toTopOf="@id/txtWednesdayHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtTuesdayOpenHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtWednesdayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtWednesdayHoursField"
+        android:id="@+id/txtWednesdayOpenHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/txtWednesdayCloseHoursField"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWednesdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtThursdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtWednesdayCloseHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtWednesdayOpenHoursField"
         app:layout_constraintTop_toBottomOf="@id/txtWednesdayHours"
         app:layout_constraintBottom_toTopOf="@id/txtThursdayHours"
         app:layout_constraintVertical_bias="0.5" />
@@ -153,19 +192,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtWednesdayHoursField"
-        app:layout_constraintBottom_toTopOf="@id/txtThursdayHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtWednesdayOpenHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtThursdayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtThursdayHoursField"
+        android:id="@+id/txtThursdayOpenHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/txtThursdayCloseHoursField"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtThursdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtFridayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtThursdayCloseHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtThursdayOpenHoursField"
         app:layout_constraintTop_toBottomOf="@id/txtThursdayHours"
         app:layout_constraintBottom_toTopOf="@id/txtFridayHours"
         app:layout_constraintVertical_bias="0.5" />
@@ -178,21 +230,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtThursdayHoursField"
-        app:layout_constraintBottom_toTopOf="@id/txtFridayHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtThursdayOpenHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtFridayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtFridayHoursField"
+        android:id="@+id/txtFridayOpenHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@id/txtSaturdayHours"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtFridayCloseHoursField"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtFridayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtFridayCloseHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtFridayOpenHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtFridayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtSaturdayHours"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
@@ -203,21 +268,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtFridayHoursField"
-        app:layout_constraintBottom_toTopOf="@id/txtSaturdayHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtFridayOpenHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtSaturdayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtSaturdayHoursField"
+        android:id="@+id/txtSaturdayOpenHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@id/txtSundayHours"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtSaturdayCloseHoursField"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtSaturdayHours"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtSaturdayCloseHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtSaturdayOpenHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtSaturdayHours"
+        app:layout_constraintBottom_toTopOf="@id/txtSundayHours"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
@@ -228,34 +306,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSaturdayHoursField"
-        app:layout_constraintBottom_toTopOf="@id/txtSundayHoursField"
+        app:layout_constraintTop_toBottomOf="@id/txtSaturdayOpenHoursField"
+        app:layout_constraintBottom_toTopOf="@id/txtSundayOpenHoursField"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtSundayHoursField"
+        android:id="@+id/txtSundayOpenHoursField"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdateInfo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnUpdateInfo"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdateInfo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/txtSundayCloseHoursField"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdateInfo"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btnUpdateInfo"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="144dp"
         android:text="Update Information"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0."
-        app:layout_constraintStart_toEndOf="@id/txtSundayHoursField"
+        app:layout_constraintEnd_toStartOf="@+id/txtSundayCloseHoursField"
+        app:layout_constraintStart_toEndOf="@+id/txtSundayOpenHoursField"
         app:layout_constraintTop_toBottomOf="@id/txtSundayHours"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.415" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

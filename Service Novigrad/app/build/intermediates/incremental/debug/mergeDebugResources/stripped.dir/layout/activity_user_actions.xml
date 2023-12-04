@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_user_actions.xml -->
+
+<!-- res/layout/user_action_activity.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewServiceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Details"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewServiceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Name"/>
+
+    <Button
+        android:id="@+id/buttonSubmitRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Service Request"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFormFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <!-- Form fields will be dynamically added here -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDocuments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <!-- Required documents will be dynamically added here -->
+    </LinearLayout>
+</LinearLayout>

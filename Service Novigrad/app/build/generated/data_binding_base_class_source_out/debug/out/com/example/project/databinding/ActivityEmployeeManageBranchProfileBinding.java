@@ -40,58 +40,83 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
   public final EditText txtBranchPhoneNumberField;
 
   @NonNull
+  public final EditText txtFridayCloseHoursField;
+
+  @NonNull
   public final TextView txtFridayHours;
 
   @NonNull
-  public final EditText txtFridayHoursField;
+  public final EditText txtFridayOpenHoursField;
+
+  @NonNull
+  public final EditText txtMondayCloseHoursField;
 
   @NonNull
   public final TextView txtMondayHours;
 
   @NonNull
-  public final EditText txtMondayHoursField;
+  public final EditText txtMondayOpenHoursField;
+
+  @NonNull
+  public final EditText txtSaturdayCloseHoursField;
 
   @NonNull
   public final TextView txtSaturdayHours;
 
   @NonNull
-  public final EditText txtSaturdayHoursField;
+  public final EditText txtSaturdayOpenHoursField;
+
+  @NonNull
+  public final EditText txtSundayCloseHoursField;
 
   @NonNull
   public final TextView txtSundayHours;
 
   @NonNull
-  public final EditText txtSundayHoursField;
+  public final EditText txtSundayOpenHoursField;
+
+  @NonNull
+  public final EditText txtThursdayCloseHoursField;
 
   @NonNull
   public final TextView txtThursdayHours;
 
   @NonNull
-  public final EditText txtThursdayHoursField;
+  public final EditText txtThursdayOpenHoursField;
+
+  @NonNull
+  public final EditText txtTuesdayCloseHoursField;
 
   @NonNull
   public final TextView txtTuesdayHours;
 
   @NonNull
-  public final EditText txtTuesdayHoursField;
+  public final EditText txtTuesdayOpenHoursField;
+
+  @NonNull
+  public final EditText txtWednesdayCloseHoursField;
 
   @NonNull
   public final TextView txtWednesdayHours;
 
   @NonNull
-  public final EditText txtWednesdayHoursField;
+  public final EditText txtWednesdayOpenHoursField;
 
   private ActivityEmployeeManageBranchProfileBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnUpdateInfo, @NonNull TextView txtBranchAdresse,
       @NonNull EditText txtBranchAdresseField, @NonNull TextView txtBranchName,
       @NonNull TextView txtBranchPhoneNumber, @NonNull EditText txtBranchPhoneNumberField,
-      @NonNull TextView txtFridayHours, @NonNull EditText txtFridayHoursField,
-      @NonNull TextView txtMondayHours, @NonNull EditText txtMondayHoursField,
-      @NonNull TextView txtSaturdayHours, @NonNull EditText txtSaturdayHoursField,
-      @NonNull TextView txtSundayHours, @NonNull EditText txtSundayHoursField,
-      @NonNull TextView txtThursdayHours, @NonNull EditText txtThursdayHoursField,
-      @NonNull TextView txtTuesdayHours, @NonNull EditText txtTuesdayHoursField,
-      @NonNull TextView txtWednesdayHours, @NonNull EditText txtWednesdayHoursField) {
+      @NonNull EditText txtFridayCloseHoursField, @NonNull TextView txtFridayHours,
+      @NonNull EditText txtFridayOpenHoursField, @NonNull EditText txtMondayCloseHoursField,
+      @NonNull TextView txtMondayHours, @NonNull EditText txtMondayOpenHoursField,
+      @NonNull EditText txtSaturdayCloseHoursField, @NonNull TextView txtSaturdayHours,
+      @NonNull EditText txtSaturdayOpenHoursField, @NonNull EditText txtSundayCloseHoursField,
+      @NonNull TextView txtSundayHours, @NonNull EditText txtSundayOpenHoursField,
+      @NonNull EditText txtThursdayCloseHoursField, @NonNull TextView txtThursdayHours,
+      @NonNull EditText txtThursdayOpenHoursField, @NonNull EditText txtTuesdayCloseHoursField,
+      @NonNull TextView txtTuesdayHours, @NonNull EditText txtTuesdayOpenHoursField,
+      @NonNull EditText txtWednesdayCloseHoursField, @NonNull TextView txtWednesdayHours,
+      @NonNull EditText txtWednesdayOpenHoursField) {
     this.rootView = rootView;
     this.btnUpdateInfo = btnUpdateInfo;
     this.txtBranchAdresse = txtBranchAdresse;
@@ -99,20 +124,27 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
     this.txtBranchName = txtBranchName;
     this.txtBranchPhoneNumber = txtBranchPhoneNumber;
     this.txtBranchPhoneNumberField = txtBranchPhoneNumberField;
+    this.txtFridayCloseHoursField = txtFridayCloseHoursField;
     this.txtFridayHours = txtFridayHours;
-    this.txtFridayHoursField = txtFridayHoursField;
+    this.txtFridayOpenHoursField = txtFridayOpenHoursField;
+    this.txtMondayCloseHoursField = txtMondayCloseHoursField;
     this.txtMondayHours = txtMondayHours;
-    this.txtMondayHoursField = txtMondayHoursField;
+    this.txtMondayOpenHoursField = txtMondayOpenHoursField;
+    this.txtSaturdayCloseHoursField = txtSaturdayCloseHoursField;
     this.txtSaturdayHours = txtSaturdayHours;
-    this.txtSaturdayHoursField = txtSaturdayHoursField;
+    this.txtSaturdayOpenHoursField = txtSaturdayOpenHoursField;
+    this.txtSundayCloseHoursField = txtSundayCloseHoursField;
     this.txtSundayHours = txtSundayHours;
-    this.txtSundayHoursField = txtSundayHoursField;
+    this.txtSundayOpenHoursField = txtSundayOpenHoursField;
+    this.txtThursdayCloseHoursField = txtThursdayCloseHoursField;
     this.txtThursdayHours = txtThursdayHours;
-    this.txtThursdayHoursField = txtThursdayHoursField;
+    this.txtThursdayOpenHoursField = txtThursdayOpenHoursField;
+    this.txtTuesdayCloseHoursField = txtTuesdayCloseHoursField;
     this.txtTuesdayHours = txtTuesdayHours;
-    this.txtTuesdayHoursField = txtTuesdayHoursField;
+    this.txtTuesdayOpenHoursField = txtTuesdayOpenHoursField;
+    this.txtWednesdayCloseHoursField = txtWednesdayCloseHoursField;
     this.txtWednesdayHours = txtWednesdayHours;
-    this.txtWednesdayHoursField = txtWednesdayHoursField;
+    this.txtWednesdayOpenHoursField = txtWednesdayOpenHoursField;
   }
 
   @Override
@@ -179,15 +211,27 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
+      id = R.id.txtFridayCloseHoursField;
+      EditText txtFridayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtFridayCloseHoursField == null) {
+        break missingId;
+      }
+
       id = R.id.txtFridayHours;
       TextView txtFridayHours = ViewBindings.findChildViewById(rootView, id);
       if (txtFridayHours == null) {
         break missingId;
       }
 
-      id = R.id.txtFridayHoursField;
-      EditText txtFridayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtFridayHoursField == null) {
+      id = R.id.txtFridayOpenHoursField;
+      EditText txtFridayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtFridayOpenHoursField == null) {
+        break missingId;
+      }
+
+      id = R.id.txtMondayCloseHoursField;
+      EditText txtMondayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtMondayCloseHoursField == null) {
         break missingId;
       }
 
@@ -197,9 +241,15 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
-      id = R.id.txtMondayHoursField;
-      EditText txtMondayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtMondayHoursField == null) {
+      id = R.id.txtMondayOpenHoursField;
+      EditText txtMondayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtMondayOpenHoursField == null) {
+        break missingId;
+      }
+
+      id = R.id.txtSaturdayCloseHoursField;
+      EditText txtSaturdayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtSaturdayCloseHoursField == null) {
         break missingId;
       }
 
@@ -209,9 +259,15 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
-      id = R.id.txtSaturdayHoursField;
-      EditText txtSaturdayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtSaturdayHoursField == null) {
+      id = R.id.txtSaturdayOpenHoursField;
+      EditText txtSaturdayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtSaturdayOpenHoursField == null) {
+        break missingId;
+      }
+
+      id = R.id.txtSundayCloseHoursField;
+      EditText txtSundayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtSundayCloseHoursField == null) {
         break missingId;
       }
 
@@ -221,9 +277,15 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
-      id = R.id.txtSundayHoursField;
-      EditText txtSundayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtSundayHoursField == null) {
+      id = R.id.txtSundayOpenHoursField;
+      EditText txtSundayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtSundayOpenHoursField == null) {
+        break missingId;
+      }
+
+      id = R.id.txtThursdayCloseHoursField;
+      EditText txtThursdayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtThursdayCloseHoursField == null) {
         break missingId;
       }
 
@@ -233,9 +295,15 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
-      id = R.id.txtThursdayHoursField;
-      EditText txtThursdayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtThursdayHoursField == null) {
+      id = R.id.txtThursdayOpenHoursField;
+      EditText txtThursdayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtThursdayOpenHoursField == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTuesdayCloseHoursField;
+      EditText txtTuesdayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtTuesdayCloseHoursField == null) {
         break missingId;
       }
 
@@ -245,9 +313,15 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
-      id = R.id.txtTuesdayHoursField;
-      EditText txtTuesdayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtTuesdayHoursField == null) {
+      id = R.id.txtTuesdayOpenHoursField;
+      EditText txtTuesdayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtTuesdayOpenHoursField == null) {
+        break missingId;
+      }
+
+      id = R.id.txtWednesdayCloseHoursField;
+      EditText txtWednesdayCloseHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtWednesdayCloseHoursField == null) {
         break missingId;
       }
 
@@ -257,18 +331,22 @@ public final class ActivityEmployeeManageBranchProfileBinding implements ViewBin
         break missingId;
       }
 
-      id = R.id.txtWednesdayHoursField;
-      EditText txtWednesdayHoursField = ViewBindings.findChildViewById(rootView, id);
-      if (txtWednesdayHoursField == null) {
+      id = R.id.txtWednesdayOpenHoursField;
+      EditText txtWednesdayOpenHoursField = ViewBindings.findChildViewById(rootView, id);
+      if (txtWednesdayOpenHoursField == null) {
         break missingId;
       }
 
       return new ActivityEmployeeManageBranchProfileBinding((ConstraintLayout) rootView,
           btnUpdateInfo, txtBranchAdresse, txtBranchAdresseField, txtBranchName,
-          txtBranchPhoneNumber, txtBranchPhoneNumberField, txtFridayHours, txtFridayHoursField,
-          txtMondayHours, txtMondayHoursField, txtSaturdayHours, txtSaturdayHoursField,
-          txtSundayHours, txtSundayHoursField, txtThursdayHours, txtThursdayHoursField,
-          txtTuesdayHours, txtTuesdayHoursField, txtWednesdayHours, txtWednesdayHoursField);
+          txtBranchPhoneNumber, txtBranchPhoneNumberField, txtFridayCloseHoursField, txtFridayHours,
+          txtFridayOpenHoursField, txtMondayCloseHoursField, txtMondayHours,
+          txtMondayOpenHoursField, txtSaturdayCloseHoursField, txtSaturdayHours,
+          txtSaturdayOpenHoursField, txtSundayCloseHoursField, txtSundayHours,
+          txtSundayOpenHoursField, txtThursdayCloseHoursField, txtThursdayHours,
+          txtThursdayOpenHoursField, txtTuesdayCloseHoursField, txtTuesdayHours,
+          txtTuesdayOpenHoursField, txtWednesdayCloseHoursField, txtWednesdayHours,
+          txtWednesdayOpenHoursField);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

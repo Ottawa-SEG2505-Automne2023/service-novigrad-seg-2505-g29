@@ -46,6 +46,8 @@
         <activity android:name=".AddService" />
         <activity android:name=".ServiceDetail" />
         <activity android:name=".ServiceManager" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".UserActionsActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

@@ -42,59 +42,83 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
   public final TextView txtBranchPhoneNumberDisplay;
 
   @NonNull
+  public final TextView txtFridayCloseHoursDisplay;
+
+  @NonNull
   public final TextView txtFridayHours;
 
   @NonNull
-  public final TextView txtFridayHoursDisplay;
+  public final TextView txtFridayOpenHoursDisplay;
+
+  @NonNull
+  public final TextView txtMondayCloseHoursDisplay;
 
   @NonNull
   public final TextView txtMondayHours;
 
   @NonNull
-  public final TextView txtMondayHoursDisplay;
+  public final TextView txtMondayOpenHoursDisplay;
+
+  @NonNull
+  public final TextView txtSaturdayCloseHoursDisplay;
 
   @NonNull
   public final TextView txtSaturdayHours;
 
   @NonNull
-  public final TextView txtSaturdayHoursDisplay;
+  public final TextView txtSaturdayOpenHoursDisplay;
+
+  @NonNull
+  public final TextView txtSundayCloseHoursDisplay;
 
   @NonNull
   public final TextView txtSundayHours;
 
   @NonNull
-  public final TextView txtSundayHoursDisplay;
+  public final TextView txtSundayOpenHoursDisplay;
+
+  @NonNull
+  public final TextView txtThursdayCloseHoursDisplay;
 
   @NonNull
   public final TextView txtThursdayHours;
 
   @NonNull
-  public final TextView txtThursdayHoursDisplay;
+  public final TextView txtThursdayOpenHoursDisplay;
+
+  @NonNull
+  public final TextView txtTuesdayCloseHoursDisplay;
 
   @NonNull
   public final TextView txtTuesdayHours;
 
   @NonNull
-  public final TextView txtTuesdayHoursDisplay;
+  public final TextView txtTuesdayOpenHoursDisplay;
+
+  @NonNull
+  public final TextView txtWednesdayCloseHoursDisplay;
 
   @NonNull
   public final TextView txtWednesdayHours;
 
   @NonNull
-  public final TextView txtWednesdayHoursDisplay;
+  public final TextView txtWednesdayOpenHoursDisplay;
 
   private ActivityEmployeeBranchProfileBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnEditBranchProfile, @NonNull Button btnReturnToHomepage,
       @NonNull TextView txtBranchAdresse, @NonNull TextView txtBranchAdresseDisplay,
       @NonNull TextView txtBranchName, @NonNull TextView txtBranchPhoneNumber,
-      @NonNull TextView txtBranchPhoneNumberDisplay, @NonNull TextView txtFridayHours,
-      @NonNull TextView txtFridayHoursDisplay, @NonNull TextView txtMondayHours,
-      @NonNull TextView txtMondayHoursDisplay, @NonNull TextView txtSaturdayHours,
-      @NonNull TextView txtSaturdayHoursDisplay, @NonNull TextView txtSundayHours,
-      @NonNull TextView txtSundayHoursDisplay, @NonNull TextView txtThursdayHours,
-      @NonNull TextView txtThursdayHoursDisplay, @NonNull TextView txtTuesdayHours,
-      @NonNull TextView txtTuesdayHoursDisplay, @NonNull TextView txtWednesdayHours,
-      @NonNull TextView txtWednesdayHoursDisplay) {
+      @NonNull TextView txtBranchPhoneNumberDisplay, @NonNull TextView txtFridayCloseHoursDisplay,
+      @NonNull TextView txtFridayHours, @NonNull TextView txtFridayOpenHoursDisplay,
+      @NonNull TextView txtMondayCloseHoursDisplay, @NonNull TextView txtMondayHours,
+      @NonNull TextView txtMondayOpenHoursDisplay, @NonNull TextView txtSaturdayCloseHoursDisplay,
+      @NonNull TextView txtSaturdayHours, @NonNull TextView txtSaturdayOpenHoursDisplay,
+      @NonNull TextView txtSundayCloseHoursDisplay, @NonNull TextView txtSundayHours,
+      @NonNull TextView txtSundayOpenHoursDisplay, @NonNull TextView txtThursdayCloseHoursDisplay,
+      @NonNull TextView txtThursdayHours, @NonNull TextView txtThursdayOpenHoursDisplay,
+      @NonNull TextView txtTuesdayCloseHoursDisplay, @NonNull TextView txtTuesdayHours,
+      @NonNull TextView txtTuesdayOpenHoursDisplay, @NonNull TextView txtWednesdayCloseHoursDisplay,
+      @NonNull TextView txtWednesdayHours, @NonNull TextView txtWednesdayOpenHoursDisplay) {
     this.rootView = rootView;
     this.btnEditBranchProfile = btnEditBranchProfile;
     this.btnReturnToHomepage = btnReturnToHomepage;
@@ -103,20 +127,27 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
     this.txtBranchName = txtBranchName;
     this.txtBranchPhoneNumber = txtBranchPhoneNumber;
     this.txtBranchPhoneNumberDisplay = txtBranchPhoneNumberDisplay;
+    this.txtFridayCloseHoursDisplay = txtFridayCloseHoursDisplay;
     this.txtFridayHours = txtFridayHours;
-    this.txtFridayHoursDisplay = txtFridayHoursDisplay;
+    this.txtFridayOpenHoursDisplay = txtFridayOpenHoursDisplay;
+    this.txtMondayCloseHoursDisplay = txtMondayCloseHoursDisplay;
     this.txtMondayHours = txtMondayHours;
-    this.txtMondayHoursDisplay = txtMondayHoursDisplay;
+    this.txtMondayOpenHoursDisplay = txtMondayOpenHoursDisplay;
+    this.txtSaturdayCloseHoursDisplay = txtSaturdayCloseHoursDisplay;
     this.txtSaturdayHours = txtSaturdayHours;
-    this.txtSaturdayHoursDisplay = txtSaturdayHoursDisplay;
+    this.txtSaturdayOpenHoursDisplay = txtSaturdayOpenHoursDisplay;
+    this.txtSundayCloseHoursDisplay = txtSundayCloseHoursDisplay;
     this.txtSundayHours = txtSundayHours;
-    this.txtSundayHoursDisplay = txtSundayHoursDisplay;
+    this.txtSundayOpenHoursDisplay = txtSundayOpenHoursDisplay;
+    this.txtThursdayCloseHoursDisplay = txtThursdayCloseHoursDisplay;
     this.txtThursdayHours = txtThursdayHours;
-    this.txtThursdayHoursDisplay = txtThursdayHoursDisplay;
+    this.txtThursdayOpenHoursDisplay = txtThursdayOpenHoursDisplay;
+    this.txtTuesdayCloseHoursDisplay = txtTuesdayCloseHoursDisplay;
     this.txtTuesdayHours = txtTuesdayHours;
-    this.txtTuesdayHoursDisplay = txtTuesdayHoursDisplay;
+    this.txtTuesdayOpenHoursDisplay = txtTuesdayOpenHoursDisplay;
+    this.txtWednesdayCloseHoursDisplay = txtWednesdayCloseHoursDisplay;
     this.txtWednesdayHours = txtWednesdayHours;
-    this.txtWednesdayHoursDisplay = txtWednesdayHoursDisplay;
+    this.txtWednesdayOpenHoursDisplay = txtWednesdayOpenHoursDisplay;
   }
 
   @Override
@@ -188,15 +219,27 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtFridayCloseHoursDisplay;
+      TextView txtFridayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtFridayCloseHoursDisplay == null) {
+        break missingId;
+      }
+
       id = R.id.txtFridayHours;
       TextView txtFridayHours = ViewBindings.findChildViewById(rootView, id);
       if (txtFridayHours == null) {
         break missingId;
       }
 
-      id = R.id.txtFridayHoursDisplay;
-      TextView txtFridayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtFridayHoursDisplay == null) {
+      id = R.id.txtFridayOpenHoursDisplay;
+      TextView txtFridayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtFridayOpenHoursDisplay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtMondayCloseHoursDisplay;
+      TextView txtMondayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtMondayCloseHoursDisplay == null) {
         break missingId;
       }
 
@@ -206,9 +249,15 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtMondayHoursDisplay;
-      TextView txtMondayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtMondayHoursDisplay == null) {
+      id = R.id.txtMondayOpenHoursDisplay;
+      TextView txtMondayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtMondayOpenHoursDisplay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtSaturdayCloseHoursDisplay;
+      TextView txtSaturdayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtSaturdayCloseHoursDisplay == null) {
         break missingId;
       }
 
@@ -218,9 +267,15 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtSaturdayHoursDisplay;
-      TextView txtSaturdayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtSaturdayHoursDisplay == null) {
+      id = R.id.txtSaturdayOpenHoursDisplay;
+      TextView txtSaturdayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtSaturdayOpenHoursDisplay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtSundayCloseHoursDisplay;
+      TextView txtSundayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtSundayCloseHoursDisplay == null) {
         break missingId;
       }
 
@@ -230,9 +285,15 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtSundayHoursDisplay;
-      TextView txtSundayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtSundayHoursDisplay == null) {
+      id = R.id.txtSundayOpenHoursDisplay;
+      TextView txtSundayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtSundayOpenHoursDisplay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtThursdayCloseHoursDisplay;
+      TextView txtThursdayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtThursdayCloseHoursDisplay == null) {
         break missingId;
       }
 
@@ -242,9 +303,15 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtThursdayHoursDisplay;
-      TextView txtThursdayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtThursdayHoursDisplay == null) {
+      id = R.id.txtThursdayOpenHoursDisplay;
+      TextView txtThursdayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtThursdayOpenHoursDisplay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTuesdayCloseHoursDisplay;
+      TextView txtTuesdayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtTuesdayCloseHoursDisplay == null) {
         break missingId;
       }
 
@@ -254,9 +321,15 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtTuesdayHoursDisplay;
-      TextView txtTuesdayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtTuesdayHoursDisplay == null) {
+      id = R.id.txtTuesdayOpenHoursDisplay;
+      TextView txtTuesdayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtTuesdayOpenHoursDisplay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtWednesdayCloseHoursDisplay;
+      TextView txtWednesdayCloseHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtWednesdayCloseHoursDisplay == null) {
         break missingId;
       }
 
@@ -266,19 +339,22 @@ public final class ActivityEmployeeBranchProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtWednesdayHoursDisplay;
-      TextView txtWednesdayHoursDisplay = ViewBindings.findChildViewById(rootView, id);
-      if (txtWednesdayHoursDisplay == null) {
+      id = R.id.txtWednesdayOpenHoursDisplay;
+      TextView txtWednesdayOpenHoursDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (txtWednesdayOpenHoursDisplay == null) {
         break missingId;
       }
 
       return new ActivityEmployeeBranchProfileBinding((ConstraintLayout) rootView,
           btnEditBranchProfile, btnReturnToHomepage, txtBranchAdresse, txtBranchAdresseDisplay,
-          txtBranchName, txtBranchPhoneNumber, txtBranchPhoneNumberDisplay, txtFridayHours,
-          txtFridayHoursDisplay, txtMondayHours, txtMondayHoursDisplay, txtSaturdayHours,
-          txtSaturdayHoursDisplay, txtSundayHours, txtSundayHoursDisplay, txtThursdayHours,
-          txtThursdayHoursDisplay, txtTuesdayHours, txtTuesdayHoursDisplay, txtWednesdayHours,
-          txtWednesdayHoursDisplay);
+          txtBranchName, txtBranchPhoneNumber, txtBranchPhoneNumberDisplay,
+          txtFridayCloseHoursDisplay, txtFridayHours, txtFridayOpenHoursDisplay,
+          txtMondayCloseHoursDisplay, txtMondayHours, txtMondayOpenHoursDisplay,
+          txtSaturdayCloseHoursDisplay, txtSaturdayHours, txtSaturdayOpenHoursDisplay,
+          txtSundayCloseHoursDisplay, txtSundayHours, txtSundayOpenHoursDisplay,
+          txtThursdayCloseHoursDisplay, txtThursdayHours, txtThursdayOpenHoursDisplay,
+          txtTuesdayCloseHoursDisplay, txtTuesdayHours, txtTuesdayOpenHoursDisplay,
+          txtWednesdayCloseHoursDisplay, txtWednesdayHours, txtWednesdayOpenHoursDisplay);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
