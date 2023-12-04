@@ -39,7 +39,6 @@ import java.util.ArrayList;
             // Assuming you pass the employee object from the previous activity
             Intent intent = getIntent();
             String email = intent.getStringExtra("EMAIL");
-            Toast.makeText(AddService.this, email, Toast.LENGTH_SHORT).show();
 
 
             // Populate the available services from Firebase
@@ -83,7 +82,7 @@ import java.util.ArrayList;
                                 // Check if the employee is found
                                 if (employee != null) {
                                     // Add the selected service to the employee's offered services
-                                    if (!employee.getOfferedServices().contains(selectedService)) {
+                                    if (!employee.getOfferedServicesNames().contains(selectedService.getName())) {
                                         employee.addOfferedService(selectedService);
                                         // Notify the user or perform additional actions if needed
                                         Toast.makeText(AddService.this, "Service added: " + selectedService.getName(), Toast.LENGTH_SHORT).show();

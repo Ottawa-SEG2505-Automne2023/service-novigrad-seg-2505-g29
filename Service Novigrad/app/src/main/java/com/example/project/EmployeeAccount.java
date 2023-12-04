@@ -55,6 +55,14 @@ public class EmployeeAccount extends Account{
         return offeredServices;
     }
 
+    public List<String> getOfferedServicesNames() {
+        ArrayList<String> serviceNames = new ArrayList<String>();
+        for(Service service : offeredServices){
+            serviceNames.add(service.getName());
+        }
+        return serviceNames;
+    }
+
 
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();

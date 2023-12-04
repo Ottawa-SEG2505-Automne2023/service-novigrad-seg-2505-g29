@@ -3596,7 +3596,6 @@ id textView2
 id textView3
 id textViewAvailableServices
 id textViewEmployeeServices
-id textViewServiceDetails
 id textViewServiceName
 id text_input_end_icon
 id text_input_error_icon

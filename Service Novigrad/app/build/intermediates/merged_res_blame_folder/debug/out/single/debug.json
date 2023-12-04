@@ -4,16 +4,16 @@
         "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\layout_activity_employee_manage_services.xml.flat",
-        "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\layout\\activity_employee_manage_services.xml"
+        "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\drawable_baseline_password_24.xml.flat",
         "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\drawable\\baseline_password_24.xml"
     },
     {
-        "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\layout_activity_employee_manage_services.xml.flat",
+        "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\layout\\activity_employee_manage_services.xml"
     },
     {
         "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\layout_manage_service.xml.flat",
@@ -64,10 +64,6 @@
         "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\layout\\activity_user_actions.xml"
     },
     {
-        "merged": "com.example.project.app-merged_res-41:/layout_activity_employee_services.xml.flat",
-        "source": "com.example.project.app-main-43:/layout/activity_employee_services.xml"
-    },
-    {
         "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\layout_activity_employee_branch_profile.xml.flat",
         "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\layout\\activity_employee_branch_profile.xml"
     },
@@ -90,6 +86,10 @@
     {
         "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\layout_activity_employee_services.xml.flat",
+        "source": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-main-43:\\layout\\activity_employee_services.xml"
     },
     {
         "merged": "C:\\Users\\Daali Othmane\\.gradle\\daemon\\8.5\\com.example.project.app-merged_res-41:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",

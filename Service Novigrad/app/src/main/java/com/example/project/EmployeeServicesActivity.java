@@ -39,8 +39,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
         // Get the email of the selected employee from the intent
         Intent intent = getIntent();
-        String employeeEmail = intent.getStringExtra("SELECTED_EMPLOYEE_EMAIL");
-
+        String employeeEmail = intent.getStringExtra("EMPLOYEE_EMAIL");
         // Retrieve offered services from Firebase
         DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
         Query query = employeeRef.orderByChild("email").equalTo(employeeEmail);

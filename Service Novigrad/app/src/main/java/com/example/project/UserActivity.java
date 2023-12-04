@@ -25,7 +25,8 @@ import java.util.ArrayList;
 public class UserActivity extends AppCompatActivity {
 
     private ArrayList<EmployeeAccount> employeeAccounts = new ArrayList<>();
-    private ArrayAdapter<EmployeeAccount> employeeAdapter;
+    private ArrayList<String> employeeNames = new ArrayList<>();  // To store only names
+    private ArrayAdapter<String> employeeAdapter;  // Modified adapter to display names
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,8 +36,8 @@ public class UserActivity extends AppCompatActivity {
         // Assuming you have a ListView in your layout with the id "listViewEmployees"
         ListView listViewEmployees = findViewById(R.id.listViewEmployees);
 
-        // Adapter for displaying employee accounts
-        employeeAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, employeeAccounts);
+        // Adapter for displaying employee names
+        employeeAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, employeeNames);
         listViewEmployees.setAdapter(employeeAdapter);
 
         // Set up click listener for selecting an employee
@@ -57,10 +58,12 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 employeeAccounts.clear();
+                employeeNames.clear();  // Clear previous names
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     EmployeeAccount employee = snapshot.getValue(EmployeeAccount.class);
                     if (employee != null) {
                         employeeAccounts.add(employee);
+                        employeeNames.add(employee.getEmail());
                     }
                 }
                 // Notify the adapter

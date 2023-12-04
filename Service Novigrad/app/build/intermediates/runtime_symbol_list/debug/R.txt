@@ -3595,7 +3595,6 @@ int id textView2 0x7f0901ea
 int id textView3 0x7f0901eb
 int id textViewAvailableServices 0x7f0901ec
 int id textViewEmployeeServices 0x7f090251
-int id textViewServiceDetails 0x7f090252
 int id textViewServiceName 0x7f0901ed
 int id text_input_end_icon 0x7f0901ee
 int id text_input_error_icon 0x7f0901ef

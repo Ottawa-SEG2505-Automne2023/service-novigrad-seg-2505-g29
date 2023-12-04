@@ -130,7 +130,7 @@ public class EmployeeManageServices extends AppCompatActivity {
         });
         builder.show();
     }private void deleteOfferedService(int position) {
-        Service deletedService = offeredServices.get(position);
+        Service deletedService = offeredServices.get(position+1);
         offeredServices.remove(deletedService);
         DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
 

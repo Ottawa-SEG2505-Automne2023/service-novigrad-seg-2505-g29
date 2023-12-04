@@ -48,7 +48,6 @@ id textView2
 id textView3
 id textViewAvailableServices
 id textViewEmployeeServices
-id textViewServiceDetails
 id textViewServiceName
 id txtBranchAdresse
 id txtBranchAdresseDisplay

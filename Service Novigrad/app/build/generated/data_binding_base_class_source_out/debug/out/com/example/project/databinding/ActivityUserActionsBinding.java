@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -24,27 +24,22 @@ public final class ActivityUserActionsBinding implements ViewBinding {
   public final Button buttonSubmitRequest;
 
   @NonNull
+  public final EditText editTextServiceName;
+
+  @NonNull
   public final LinearLayout linearLayoutDocuments;
 
   @NonNull
   public final LinearLayout linearLayoutFormFields;
 
-  @NonNull
-  public final TextView textViewServiceDetails;
-
-  @NonNull
-  public final TextView textViewServiceName;
-
   private ActivityUserActionsBinding(@NonNull LinearLayout rootView,
-      @NonNull Button buttonSubmitRequest, @NonNull LinearLayout linearLayoutDocuments,
-      @NonNull LinearLayout linearLayoutFormFields, @NonNull TextView textViewServiceDetails,
-      @NonNull TextView textViewServiceName) {
+      @NonNull Button buttonSubmitRequest, @NonNull EditText editTextServiceName,
+      @NonNull LinearLayout linearLayoutDocuments, @NonNull LinearLayout linearLayoutFormFields) {
     this.rootView = rootView;
     this.buttonSubmitRequest = buttonSubmitRequest;
+    this.editTextServiceName = editTextServiceName;
     this.linearLayoutDocuments = linearLayoutDocuments;
     this.linearLayoutFormFields = linearLayoutFormFields;
-    this.textViewServiceDetails = textViewServiceDetails;
-    this.textViewServiceName = textViewServiceName;
   }
 
   @Override
@@ -80,6 +75,12 @@ public final class ActivityUserActionsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.editTextServiceName;
+      EditText editTextServiceName = ViewBindings.findChildViewById(rootView, id);
+      if (editTextServiceName == null) {
+        break missingId;
+      }
+
       id = R.id.linearLayoutDocuments;
       LinearLayout linearLayoutDocuments = ViewBindings.findChildViewById(rootView, id);
       if (linearLayoutDocuments == null) {
@@ -92,21 +93,8 @@ public final class ActivityUserActionsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textViewServiceDetails;
-      TextView textViewServiceDetails = ViewBindings.findChildViewById(rootView, id);
-      if (textViewServiceDetails == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewServiceName;
-      TextView textViewServiceName = ViewBindings.findChildViewById(rootView, id);
-      if (textViewServiceName == null) {
-        break missingId;
-      }
-
       return new ActivityUserActionsBinding((LinearLayout) rootView, buttonSubmitRequest,
-          linearLayoutDocuments, linearLayoutFormFields, textViewServiceDetails,
-          textViewServiceName);
+          editTextServiceName, linearLayoutDocuments, linearLayoutFormFields);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
