@@ -20,11 +20,13 @@ id btnManageUsers
 id btnReturnToHomepage
 id btnUpdateInfo
 id btnViewServiceRequests
+id buttonAccept
 id buttonAddDocument
 id buttonAddFormField
 id buttonAddService
 id buttonCreateService
 id buttonCreateServiceType
+id buttonDecline
 id buttonDeleteService
 id buttonSubmitRequest
 id buttonUpdateService
@@ -35,10 +37,13 @@ id inputFirstName
 id inputLastName
 id inputPassword
 id inputPasswordConfirm
+id layoutDocuments
+id layoutFormFields
 id linearLayoutDocuments
 id linearLayoutFormFields
 id listViewAvailableServices
 id listViewEmployees
+id listViewRequestedServices
 id listViewServices
 id sign
 id switchToSignin
@@ -48,7 +53,9 @@ id textView2
 id textView3
 id textViewAvailableServices
 id textViewEmployeeServices
+id textViewRequestsTitle
 id textViewServiceName
+id textViewStatus
 id txtBranchAdresse
 id txtBranchAdresseDisplay
 id txtBranchAdresseField
@@ -101,6 +108,7 @@ layout activity_admin_manage_users
 layout activity_employee_branch_profile
 layout activity_employee_homepage
 layout activity_employee_manage_branch_profile
+layout activity_employee_manage_requests
 layout activity_employee_manage_services
 layout activity_employee_services
 layout activity_login
@@ -108,6 +116,7 @@ layout activity_main
 layout activity_signup
 layout activity_user
 layout activity_user_actions
+layout activity_view_requested_service
 layout layout_service
 layout manage_service
 mipmap ic_launcher

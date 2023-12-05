@@ -42,5 +42,14 @@ public class EmployeeHomepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnViewServiceRequests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EmployeeHomepage.this, EmployeeManageRequests.class);
+                intent.putExtra("EMAIL", email);
+                startActivity(intent);
+            }
+        });
     }
 }

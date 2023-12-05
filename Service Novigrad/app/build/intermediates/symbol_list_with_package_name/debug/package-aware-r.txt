@@ -3215,11 +3215,13 @@ id btnManageUsers
 id btnReturnToHomepage
 id btnUpdateInfo
 id btnViewServiceRequests
+id buttonAccept
 id buttonAddDocument
 id buttonAddFormField
 id buttonAddService
 id buttonCreateService
 id buttonCreateServiceType
+id buttonDecline
 id buttonDeleteService
 id buttonPanel
 id buttonSubmitRequest
@@ -3366,6 +3368,8 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutDocuments
+id layoutFormFields
 id left
 id leftToRight
 id legacy
@@ -3378,6 +3382,7 @@ id linearLayoutFormFields
 id listMode
 id listViewAvailableServices
 id listViewEmployees
+id listViewRequestedServices
 id listViewServices
 id list_item
 id m3_side_sheet
@@ -3596,7 +3601,9 @@ id textView2
 id textView3
 id textViewAvailableServices
 id textViewEmployeeServices
+id textViewRequestsTitle
 id textViewServiceName
+id textViewStatus
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3813,6 +3820,7 @@ layout activity_admin_manage_users
 layout activity_employee_branch_profile
 layout activity_employee_homepage
 layout activity_employee_manage_branch_profile
+layout activity_employee_manage_requests
 layout activity_employee_manage_services
 layout activity_employee_services
 layout activity_login
@@ -3820,6 +3828,7 @@ layout activity_main
 layout activity_signup
 layout activity_user
 layout activity_user_actions
+layout activity_view_requested_service
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

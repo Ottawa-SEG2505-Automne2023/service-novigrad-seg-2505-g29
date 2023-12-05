@@ -12,6 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 // (Existing imports...)
@@ -21,6 +25,7 @@ public class UserActionsActivity extends AppCompatActivity {
     private static final int REQUEST_FILE_PICKER = 3;
 
     private Service selectedService;
+    private String employeeEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,7 @@ public class UserActionsActivity extends AppCompatActivity {
         // Assuming you have some way of getting the selected service
         // Replace the following with your actual logic to get the selected service
         selectedService = getIntent().getParcelableExtra("SELECTED_SERVICE");
+        employeeEmail = getIntent().getStringExtra("EMPLOYEE_EMAIL");
 
         // Display service details in the form
         displayServiceDetails();
@@ -128,13 +134,14 @@ public class UserActionsActivity extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_FILE_PICKER);
     }
 
+    // Inside UserActionsActivity.java
     private void processServiceRequest() {
-        // Retrieve user-entered data and process the service request
+        // Retrieve user-entered data
         String serviceName = ((EditText) findViewById(R.id.editTextServiceName)).getText().toString();
         List<String> formFieldValues = getFieldValues(findViewById(R.id.linearLayoutFormFields));
         List<String> documentValues = getFieldValues(findViewById(R.id.linearLayoutDocuments));
 
-        if (serviceName.trim().isEmpty() || formFieldValues.isEmpty() || documentValues.isEmpty() || containsEmptyField(formFieldValues) || containsEmptyField(documentValues)) {
+        if (serviceName.trim().isEmpty() || formFieldValues.isEmpty() /*|| documentValues.isEmpty()*/ || containsEmptyField(formFieldValues) /*|| containsEmptyField(documentValues)*/) {
             // Show an error message if any of the fields is empty
             Toast.makeText(
                     UserActionsActivity.this,
@@ -144,18 +151,29 @@ public class UserActionsActivity extends AppCompatActivity {
             return;
         }
 
-        // Process the service request (e.g., send to the server, store in the database, etc.)
-        // For illustration purposes, let's show a Toast with the entered details
+        // Get the employee's identifier (replace "employeeIdentifier" with the actual identifier)
+        String employeeIdentifier = employeeEmail; // Replace this with the actual identifier
+
+        // Create a ServiceRequest object with the entered details
+        ServiceRequest serviceRequest = new ServiceRequest(selectedService, formFieldValues, documentValues, "Pending", employeeIdentifier);
+
+        // Send the service request to the server or store it in the database
+        DatabaseReference serviceRequestsRef = FirebaseDatabase.getInstance().getReference("ServiceRequests");
+        String requestId = serviceRequestsRef.push().getKey();
+        serviceRequestsRef.child(requestId).setValue(serviceRequest);
+
+        // Show a success message
         Toast.makeText(
                 UserActionsActivity.this,
                 "Service Request Submitted Successfully\nName: " + serviceName + "\nForm Fields: " + formFieldValues + "\nDocuments: " + documentValues,
                 Toast.LENGTH_LONG
         ).show();
 
-        // You can also send the data to the server or store it in the database here
-
-        finish(); // Finish the activity after processing the request
+        // Finish the activity after processing the request
+        finish();
     }
+
+
 
     private List<String> getFieldValues(LinearLayout layout) {
         List<String> fieldValues = new ArrayList<>();

@@ -1,52 +1,77 @@
 package com.example.project;
 
-// ServiceRequest.java
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.List;
+
 public class ServiceRequest implements Parcelable {
-    private String userName;
-    private String userAddress;
-    private String userDocuments;
-    private Service selectedService;
+    private Service service;
+    private List<String> formFieldValues;
+    private List<String> documentValues;
+    private String status;
+    private String employeeIdentifier;
 
-    // Default constructor
+    // Constructors, getters, and setters
+
     public ServiceRequest() {
-        // Default constructor required for calls to DataSnapshot.getValue(ServiceRequest.class)
+        // Default constructor required for Firebase
     }
 
-    // Parameterized constructor
-    public ServiceRequest(String userName, String userAddress, String userDocuments, Service selectedService) {
-        this.userName = userName;
-        this.userAddress = userAddress;
-        this.userDocuments = userDocuments;
-        this.selectedService = selectedService;
+    public ServiceRequest(Service service, List<String> formFieldValues, List<String> documentValues, String status, String employeeIdentifier) {
+        this.service = service;
+        this.formFieldValues = formFieldValues;
+        this.documentValues = documentValues;
+        this.status = status;
+        this.employeeIdentifier = employeeIdentifier;
     }
 
-    // Getter methods
-    public String getUserName() {
-        return userName;
+    public Service getService() {
+        return service;
     }
 
-    public String getUserAddress() {
-        return userAddress;
+    public void setService(Service service) {
+        this.service = service;
     }
 
-    public String getUserDocuments() {
-        return userDocuments;
+    public List<String> getFormFieldValues() {
+        return formFieldValues;
     }
 
-    public Service getSelectedService() {
-        return selectedService;
+    public void setFormFieldValues(List<String> formFieldValues) {
+        this.formFieldValues = formFieldValues;
     }
 
-    // Parcelable implementation
+    public List<String> getDocumentValues() {
+        return documentValues;
+    }
+
+    public void setDocumentValues(List<String> documentValues) {
+        this.documentValues = documentValues;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getEmployeeIdentifier() {
+        return employeeIdentifier;
+    }
+
+    public void setEmployeeIdentifier(String employeeIdentifier) {
+        this.employeeIdentifier = employeeIdentifier;
+    }
+
     protected ServiceRequest(Parcel in) {
-        userName = in.readString();
-        userAddress = in.readString();
-        userDocuments = in.readString();
-        selectedService = in.readParcelable(Service.class.getClassLoader());
+        service = in.readParcelable(Service.class.getClassLoader());
+        formFieldValues = in.createStringArrayList();
+        documentValues = in.createStringArrayList();
+        status = in.readString();
+        employeeIdentifier = in.readString();
     }
 
     public static final Creator<ServiceRequest> CREATOR = new Creator<ServiceRequest>() {
@@ -68,10 +93,11 @@ public class ServiceRequest implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(userName);
-        dest.writeString(userAddress);
-        dest.writeString(userDocuments);
-        dest.writeParcelable(selectedService, flags);
+        dest.writeParcelable(service, flags);
+        dest.writeStringList(formFieldValues);
+        dest.writeStringList(documentValues);
+        dest.writeString(status);
+        dest.writeString(employeeIdentifier);
     }
 }
 

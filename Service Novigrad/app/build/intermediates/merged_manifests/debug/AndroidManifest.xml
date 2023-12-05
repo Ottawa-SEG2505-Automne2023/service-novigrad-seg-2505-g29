@@ -67,6 +67,8 @@
         <activity android:name="com.example.project.UserActivity" />
         <activity android:name="com.example.project.EmployeeServicesActivity" />
         <activity android:name="com.example.project.UserActionsActivity" />
+        <activity android:name="com.example.project.ViewRequestedService" />
+        <activity android:name="com.example.project.EmployeeManageRequests" />
         <activity
             android:name="com.example.project.LoginActivity"
             android:exported="true" >

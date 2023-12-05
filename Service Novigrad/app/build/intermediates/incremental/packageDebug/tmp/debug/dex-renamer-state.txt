@@ -1,4 +1,4 @@
-#Sun Dec 03 23:56:48 EST 2023
+#Tue Dec 05 02:22:15 EST 2023
 base.0=C\:\\Users\\Daali Othmane\\OneDrive\\Documents\\GitHub\\service-novigrad-seg-2505-g29\\Service Novigrad\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Daali Othmane\\OneDrive\\Documents\\GitHub\\service-novigrad-seg-2505-g29\\Service Novigrad\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Daali Othmane\\OneDrive\\Documents\\GitHub\\service-novigrad-seg-2505-g29\\Service Novigrad\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex

@@ -40,6 +40,7 @@ public class UserActivity extends AppCompatActivity {
         employeeAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, employeeNames);
         listViewEmployees.setAdapter(employeeAdapter);
 
+
         // Set up click listener for selecting an employee
         listViewEmployees.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -3214,11 +3214,13 @@ int id btnManageUsers 0x7f09006f
 int id btnReturnToHomepage 0x7f090070
 int id btnUpdateInfo 0x7f090071
 int id btnViewServiceRequests 0x7f090072
+int id buttonAccept 0x7f090253
 int id buttonAddDocument 0x7f090073
 int id buttonAddFormField 0x7f090074
 int id buttonAddService 0x7f090075
 int id buttonCreateService 0x7f090076
 int id buttonCreateServiceType 0x7f090077
+int id buttonDecline 0x7f090254
 int id buttonDeleteService 0x7f090078
 int id buttonPanel 0x7f090079
 int id buttonSubmitRequest 0x7f090250
@@ -3365,6 +3367,8 @@ int id jumpToEnd 0x7f090105
 int id jumpToStart 0x7f090106
 int id labeled 0x7f090107
 int id layout 0x7f090108
+int id layoutDocuments 0x7f090257
+int id layoutFormFields 0x7f090258
 int id left 0x7f090109
 int id leftToRight 0x7f09010a
 int id legacy 0x7f09010b
@@ -3377,6 +3381,7 @@ int id linearLayoutFormFields 0x7f090111
 int id listMode 0x7f090112
 int id listViewAvailableServices 0x7f090113
 int id listViewEmployees 0x7f09024f
+int id listViewRequestedServices 0x7f090255
 int id listViewServices 0x7f090114
 int id list_item 0x7f090115
 int id m3_side_sheet 0x7f090116
@@ -3595,7 +3600,9 @@ int id textView2 0x7f0901ea
 int id textView3 0x7f0901eb
 int id textViewAvailableServices 0x7f0901ec
 int id textViewEmployeeServices 0x7f090251
+int id textViewRequestsTitle 0x7f090256
 int id textViewServiceName 0x7f0901ed
+int id textViewStatus 0x7f090259
 int id text_input_end_icon 0x7f0901ee
 int id text_input_error_icon 0x7f0901ef
 int id text_input_start_icon 0x7f0901f0
@@ -3812,6 +3819,7 @@ int layout activity_admin_manage_users 0x7f0c0020
 int layout activity_employee_branch_profile 0x7f0c0021
 int layout activity_employee_homepage 0x7f0c0022
 int layout activity_employee_manage_branch_profile 0x7f0c0023
+int layout activity_employee_manage_requests 0x7f0c007e
 int layout activity_employee_manage_services 0x7f0c0024
 int layout activity_employee_services 0x7f0c007d
 int layout activity_login 0x7f0c0025
@@ -3819,6 +3827,7 @@ int layout activity_main 0x7f0c0026
 int layout activity_signup 0x7f0c0027
 int layout activity_user 0x7f0c007b
 int layout activity_user_actions 0x7f0c007c
+int layout activity_view_requested_service 0x7f0c007f
 int layout browser_actions_context_menu_page 0x7f0c0028
 int layout browser_actions_context_menu_row 0x7f0c0029
 int layout custom_dialog 0x7f0c002a

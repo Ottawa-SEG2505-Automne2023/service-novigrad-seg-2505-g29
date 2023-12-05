@@ -77,6 +77,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
                 Intent intent = new Intent(EmployeeServicesActivity.this, UserActionsActivity.class);
                 // Pass the selected service to UserActionServiceActivity
                 intent.putExtra("SELECTED_SERVICE", offeredServices.get(position));
+                intent.putExtra("EMPLOYEE_EMAIL", employeeEmail);
                 startActivity(intent);
             }
         });
