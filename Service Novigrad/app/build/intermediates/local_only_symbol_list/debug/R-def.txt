@@ -55,7 +55,6 @@ id textViewAvailableServices
 id textViewEmployeeServices
 id textViewRequestsTitle
 id textViewServiceName
-id textViewStatus
 id txtBranchAdresse
 id txtBranchAdresseDisplay
 id txtBranchAdresseField

@@ -1,4 +1,3 @@
-// ViewRequestedService.java
 package com.example.project;
 
 import android.os.Bundle;
@@ -10,11 +9,11 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 
 import java.util.List;
 
@@ -57,51 +56,59 @@ public class ViewRequestedService extends AppCompatActivity {
         // Display service request details
         TextView textViewServiceName = findViewById(R.id.textViewServiceName);
         textViewServiceName.setText(selectedRequest.getService().getName());
-
-        LinearLayout layoutFormFields = findViewById(R.id.linearLayoutFormFields);
+        int i = 0;
+        LinearLayout layoutFormFields = findViewById(R.id.layoutFormFields); // Update this line
         for (String formFieldValue : selectedRequest.getFormFieldValues()) {
-            addNewLabelAndValue(layoutFormFields, formFieldValue);
+            addNewLabelAndValue(layoutFormFields, formFieldValue, selectedRequest.getService().getFormFields().get(i));
+            i++;
         }
-
-        LinearLayout layoutDocuments = findViewById(R.id.linearLayoutDocuments);
+        i = 0;
+        LinearLayout layoutDocuments = findViewById(R.id.layoutDocuments); // Update this line
         for (String documentValue : selectedRequest.getDocumentValues()) {
-            addNewLabelAndValue(layoutDocuments, documentValue);
+            addNewLabelAndValue(layoutDocuments, documentValue, selectedRequest.getService().getRequiredDocuments().get(i));
+            i++;
         }
     }
 
-    private void addNewLabelAndValue(LinearLayout layout, String value) {
-        // Create a new LinearLayout to hold the label and the value
-        LinearLayout labelValueLayout = new LinearLayout(this);
-        labelValueLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        ));
-        labelValueLayout.setOrientation(LinearLayout.VERTICAL);
 
-        // Create a TextView for the label
-        TextView labelTextView = new TextView(this);
-        labelTextView.setText(value);
 
-        // Add the label to the labelValueLayout
-        labelValueLayout.addView(labelTextView);
+    private void addNewLabelAndValue(LinearLayout layout, String value, String label) {
+        if (value != null) {
+            // Create a new LinearLayout to hold the label and the value
+            LinearLayout labelValueLayout = new LinearLayout(this);
+            labelValueLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            ));
+            labelValueLayout.setOrientation(LinearLayout.HORIZONTAL); // Set orientation to horizontal
 
-        // Add the labelValueLayout to the main layout
-        layout.addView(labelValueLayout);
+            // Create a TextView for the label and value
+            TextView labelValueTextView = new TextView(this);
+            labelValueTextView.setText(label + ": " + value); // Set the label and value text here
+
+            // Add the label and value TextView to the labelValueLayout
+            labelValueLayout.addView(labelValueTextView);
+
+            // Add the labelValueLayout to the main layout
+            layout.addView(labelValueLayout);
+        }
     }
+
 
     private void processRequestResponse(String response) {
         DatabaseReference serviceRequestsRef = FirebaseDatabase.getInstance().getReference("ServiceRequests");
 
-        serviceRequestsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        serviceRequestsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     ServiceRequest serviceRequest = snapshot.getValue(ServiceRequest.class);
-
                     // Check if the service request matches the selected service and employee
-                    if (serviceRequest != null && serviceRequest.equals(selectedRequest)) {
+                    if (serviceRequest != null && serviceRequest.getEmployeeIdentifier().equals(selectedRequest.getEmployeeIdentifier()) && serviceRequest.getService().getName().equals(selectedRequest.getService().getName())) {
                         // Update the status of the service request directly in the database
                         snapshot.getRef().child("status").setValue(response);
+
 
                         // Show a success message
                         Toast.makeText(
@@ -122,6 +129,7 @@ public class ViewRequestedService extends AppCompatActivity {
                         "Matching service request not found",
                         Toast.LENGTH_LONG
                 ).show();
+
             }
 
             @Override
@@ -135,7 +143,6 @@ public class ViewRequestedService extends AppCompatActivity {
             }
         });
     }
-
-
 }
+
 

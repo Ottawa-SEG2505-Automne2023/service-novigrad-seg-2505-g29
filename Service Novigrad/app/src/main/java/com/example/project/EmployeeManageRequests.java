@@ -81,9 +81,6 @@ public class EmployeeManageRequests extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     ServiceRequest request = snapshot.getValue(ServiceRequest.class);
                     if (request != null) {
-                        // Check if the request is related to the current employee
-                        // You need a way to identify the employee, e.g., through email
-                        // For now, let's assume the employee's email is stored in SharedPreferences
                         if (request.getEmployeeIdentifier().equals(employeeEmail)) {
                             serviceRequests.add(request);
                         }

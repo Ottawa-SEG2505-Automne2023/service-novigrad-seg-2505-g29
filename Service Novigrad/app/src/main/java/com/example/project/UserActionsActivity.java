@@ -13,8 +13,11 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -96,7 +99,7 @@ public class UserActionsActivity extends AppCompatActivity {
     }
 
     private void addNewDocumentField(LinearLayout layout, String label) {
-        // Create a new LinearLayout to hold the label and the document selection button
+        // Create a new LinearLayout to hold the label and the document EditText
         LinearLayout fieldLayout = new LinearLayout(this);
         fieldLayout.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -108,24 +111,21 @@ public class UserActionsActivity extends AppCompatActivity {
         TextView labelTextView = new TextView(this);
         labelTextView.setText(label);
 
-        // Create a Button for document selection
-        Button selectDocumentButton = new Button(this);
-        selectDocumentButton.setText("Select Document");
-        selectDocumentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open the file picker when the button is clicked
-                openFilePicker();
-            }
-        });
+        // Create an EditText for entering document names
+        EditText documentEditText = new EditText(this);
+        documentEditText.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        ));
 
-        // Add the label and document selection button to the fieldLayout
+        // Add the label and document EditText to the fieldLayout
         fieldLayout.addView(labelTextView);
-        fieldLayout.addView(selectDocumentButton);
+        fieldLayout.addView(documentEditText);
 
         // Add the fieldLayout to the main layout
         layout.addView(fieldLayout);
     }
+
 
     private void openFilePicker() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -141,7 +141,7 @@ public class UserActionsActivity extends AppCompatActivity {
         List<String> formFieldValues = getFieldValues(findViewById(R.id.linearLayoutFormFields));
         List<String> documentValues = getFieldValues(findViewById(R.id.linearLayoutDocuments));
 
-        if (serviceName.trim().isEmpty() || formFieldValues.isEmpty() /*|| documentValues.isEmpty()*/ || containsEmptyField(formFieldValues) /*|| containsEmptyField(documentValues)*/) {
+        if (serviceName.trim().isEmpty() || formFieldValues.isEmpty() || containsEmptyField(formFieldValues) || containsEmptyField(documentValues)) {
             // Show an error message if any of the fields is empty
             Toast.makeText(
                     UserActionsActivity.this,
@@ -153,6 +153,16 @@ public class UserActionsActivity extends AppCompatActivity {
 
         // Get the employee's identifier (replace "employeeIdentifier" with the actual identifier)
         String employeeIdentifier = employeeEmail; // Replace this with the actual identifier
+
+        if (!isRequestAlreadyExists(employeeIdentifier, serviceName)) {
+            // Show an error message
+            Toast.makeText(
+                    UserActionsActivity.this,
+                    "You have already submitted this Service",
+                    Toast.LENGTH_LONG
+            ).show();
+            return;
+        }
 
         // Create a ServiceRequest object with the entered details
         ServiceRequest serviceRequest = new ServiceRequest(selectedService, formFieldValues, documentValues, "Pending", employeeIdentifier);
@@ -172,7 +182,6 @@ public class UserActionsActivity extends AppCompatActivity {
         // Finish the activity after processing the request
         finish();
     }
-
 
 
     private List<String> getFieldValues(LinearLayout layout) {
@@ -214,8 +223,46 @@ public class UserActionsActivity extends AppCompatActivity {
             Toast.makeText(this, "Selected Document: " + selectedDocumentUri.toString(), Toast.LENGTH_LONG).show();
         }
     }
-}
 
+    private boolean isRequestAlreadyExists(String employeeId, String serviceName) {
+        DatabaseReference serviceRequestsRef = FirebaseDatabase.getInstance().getReference("ServiceRequests");
+        final boolean[] flag = new boolean[1];
+        serviceRequestsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    ServiceRequest serviceRequest = snapshot.getValue(ServiceRequest.class);
+                    // Check if the service request matches the selected service and employee
+                    if (serviceRequest != null && serviceRequest.getEmployeeIdentifier().equals(employeeId) && serviceRequest.getService().getName().equals(serviceName)) {
+                        // Update the status of the service request directly in the database
+                            // Update the status of the service request directly in the database
+                            flag[0] = false;
+                            return;
+
+                        } else {
+                            flag[0] = true;
+                            return;
+                        }
+                    }
+                }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle errors here
+                Toast.makeText(
+                        UserActionsActivity.this,
+                        "Error: " + databaseError.getMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+        
+        return flag[0];
+    }
+
+
+}
 
 
 

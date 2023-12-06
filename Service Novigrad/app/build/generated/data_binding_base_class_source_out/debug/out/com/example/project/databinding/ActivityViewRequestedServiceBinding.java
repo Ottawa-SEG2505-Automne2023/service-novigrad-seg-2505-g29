@@ -35,20 +35,16 @@ public final class ActivityViewRequestedServiceBinding implements ViewBinding {
   @NonNull
   public final TextView textViewServiceName;
 
-  @NonNull
-  public final TextView textViewStatus;
-
   private ActivityViewRequestedServiceBinding(@NonNull LinearLayout rootView,
       @NonNull Button buttonAccept, @NonNull Button buttonDecline,
       @NonNull LinearLayout layoutDocuments, @NonNull LinearLayout layoutFormFields,
-      @NonNull TextView textViewServiceName, @NonNull TextView textViewStatus) {
+      @NonNull TextView textViewServiceName) {
     this.rootView = rootView;
     this.buttonAccept = buttonAccept;
     this.buttonDecline = buttonDecline;
     this.layoutDocuments = layoutDocuments;
     this.layoutFormFields = layoutFormFields;
     this.textViewServiceName = textViewServiceName;
-    this.textViewStatus = textViewStatus;
   }
 
   @Override
@@ -108,14 +104,8 @@ public final class ActivityViewRequestedServiceBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textViewStatus;
-      TextView textViewStatus = ViewBindings.findChildViewById(rootView, id);
-      if (textViewStatus == null) {
-        break missingId;
-      }
-
       return new ActivityViewRequestedServiceBinding((LinearLayout) rootView, buttonAccept,
-          buttonDecline, layoutDocuments, layoutFormFields, textViewServiceName, textViewStatus);
+          buttonDecline, layoutDocuments, layoutFormFields, textViewServiceName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
