@@ -34,6 +34,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.Project" >
         <activity
+            android:name="com.example.project.UserHoursSearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.UserSearchByHours"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.UserServiceSearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.UserSearchByService"
+            android:exported="false" />
+        <activity
             android:name="com.example.project.UserAdresseSearchResultActivity"
             android:exported="false" />
         <activity

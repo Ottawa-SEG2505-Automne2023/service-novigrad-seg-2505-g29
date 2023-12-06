@@ -3106,6 +3106,7 @@ int id CTRL 0x7f090003
 int id FUNCTION 0x7f090004
 int id META 0x7f090005
 int id NO_DEBUG 0x7f090006
+int id RadioGroup 0x7f090260
 int id SHIFT 0x7f090007
 int id SHOW_ALL 0x7f090008
 int id SHOW_PATH 0x7f090009
@@ -3218,6 +3219,7 @@ int id btnSearchByAdresse 0x7f090254
 int id btnSearchByHours 0x7f090255
 int id btnSearchByServices 0x7f090256
 int id btnUpdateInfo 0x7f090071
+int id btnViewAllBranches 0x7f09025e
 int id btnViewServiceRequests 0x7f090072
 int id buttonAccept 0x7f090073
 int id buttonAddDocument 0x7f090074
@@ -3387,6 +3389,7 @@ int id listMode 0x7f090117
 int id listViewAvailableServices 0x7f090118
 int id listViewEmployees 0x7f090119
 int id listViewRequestedServices 0x7f09011a
+int id listViewSearchResults 0x7f09025f
 int id listViewServices 0x7f09011b
 int id list_item 0x7f09011c
 int id m3_side_sheet 0x7f09011d
@@ -3649,7 +3652,6 @@ int id txtMondayCloseHoursField 0x7f09021d
 int id txtMondayHours 0x7f09021e
 int id txtMondayOpenHoursDisplay 0x7f09021f
 int id txtMondayOpenHoursField 0x7f090220
-int id txtReturn 0x7f090257
 int id txtSaturdayCloseHoursDisplay 0x7f090221
 int id txtSaturdayCloseHoursField 0x7f090222
 int id txtSaturdayHours 0x7f090223
@@ -3837,8 +3839,12 @@ int layout activity_signup 0x7f0c0029
 int layout activity_user 0x7f0c002a
 int layout activity_user_actions 0x7f0c002b
 int layout activity_user_adresse_search_result 0x7f0c0081
+int layout activity_user_hours_search_result 0x7f0c0083
 int layout activity_user_search_branches 0x7f0c0080
 int layout activity_user_search_by_adresse 0x7f0c0082
+int layout activity_user_search_by_hours 0x7f0c0084
+int layout activity_user_search_by_service 0x7f0c0085
+int layout activity_user_service_search_result 0x7f0c0086
 int layout activity_view_requested_service 0x7f0c002c
 int layout browser_actions_context_menu_page 0x7f0c002d
 int layout browser_actions_context_menu_row 0x7f0c002e

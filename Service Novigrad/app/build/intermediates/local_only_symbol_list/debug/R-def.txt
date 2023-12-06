@@ -10,6 +10,7 @@ drawable baseline_password_24
 drawable baseline_person_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id RadioGroup
 id btnBack
 id btnCreateAccount
 id btnEditBranchProfile
@@ -24,6 +25,7 @@ id btnSearchByAdresse
 id btnSearchByHours
 id btnSearchByServices
 id btnUpdateInfo
+id btnViewAllBranches
 id btnViewServiceRequests
 id buttonAccept
 id buttonAddDocument
@@ -49,6 +51,7 @@ id linearLayoutFormFields
 id listViewAvailableServices
 id listViewEmployees
 id listViewRequestedServices
+id listViewSearchResults
 id listViewServices
 id sign
 id switchToSignin
@@ -77,7 +80,6 @@ id txtMondayCloseHoursField
 id txtMondayHours
 id txtMondayOpenHoursDisplay
 id txtMondayOpenHoursField
-id txtReturn
 id txtSaturdayCloseHoursDisplay
 id txtSaturdayCloseHoursField
 id txtSaturdayHours
@@ -126,8 +128,12 @@ layout activity_signup
 layout activity_user
 layout activity_user_actions
 layout activity_user_adresse_search_result
+layout activity_user_hours_search_result
 layout activity_user_search_branches
 layout activity_user_search_by_adresse
+layout activity_user_search_by_hours
+layout activity_user_search_by_service
+layout activity_user_service_search_result
 layout activity_view_requested_service
 layout layout_service
 layout manage_service

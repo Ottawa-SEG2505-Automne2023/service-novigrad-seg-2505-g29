@@ -21,6 +21,7 @@ public class UserSearchBranchesActivity extends AppCompatActivity {
         Button btnSearchByAdresse = findViewById(R.id.btnSearchByAdresse);
         Button btnSearchByHours = findViewById(R.id.btnSearchByHours);
         Button btnSearchByServices = findViewById(R.id.btnSearchByServices);
+        Button btnViewAllBranches = findViewById(R.id.btnViewAllBranches);
 
         btnSearchByAdresse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,10 +31,26 @@ public class UserSearchBranchesActivity extends AppCompatActivity {
             }
         });
 
+        btnSearchByHours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserSearchBranchesActivity.this , UserSearchByHours.class);
+                startActivity(intent);
+            }
+        });
+
         btnSearchByServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserSearchBranchesActivity.this , UserSearchByService.class);
+                startActivity(intent);
+            }
+        });
+
+        btnViewAllBranches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserSearchBranchesActivity.this , UserActivity.class);
                 startActivity(intent);
             }
         });
