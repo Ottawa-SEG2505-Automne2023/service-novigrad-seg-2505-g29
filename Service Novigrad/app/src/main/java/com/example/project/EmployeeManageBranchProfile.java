@@ -14,33 +14,32 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class EmployeeManageBranchProfile extends AppCompatActivity {
 
-    //Variables
-    TextView txtBranchName = findViewById(R.id.txtBranchName);
-    EditText txtBranchAdresseField = findViewById(R.id.txtBranchAdresseField);
-    EditText txtBranchPhoneNumberField = findViewById(R.id.txtBranchPhoneNumberField);
-    EditText txtMondayOpenHours = findViewById(R.id.txtMondayOpenHoursField);
-    EditText txtTuesdayOpenHours = findViewById(R.id.txtTuesdayOpenHoursField);
-    EditText txtWednesdayOpenHours = findViewById(R.id.txtWednesdayOpenHoursField);
-    EditText txtThursdayOpenHours = findViewById(R.id.txtThursdayOpenHoursField);
-    EditText txtFridayOpenHours = findViewById(R.id.txtFridayOpenHoursField);
-    EditText txtSaturdayOpenHours = findViewById(R.id.txtSaturdayOpenHoursField);
-    EditText txtSundayOpenHours = findViewById(R.id.txtSundayOpenHoursField);
-    EditText txtMondayCloseHours = findViewById(R.id.txtMondayCloseHoursField);
-    EditText txtTuesdayCloseHours = findViewById(R.id.txtTuesdayCloseHoursField);
-    EditText txtWednesdayCloseHours = findViewById(R.id.txtWednesdayCloseHoursField);
-    EditText txtThursdayCloseHours = findViewById(R.id.txtThursdayCloseHoursField);
-    EditText txtFridayCloseHours = findViewById(R.id.txtFridayCloseHoursField);
-    EditText txtSaturdayCloseHours = findViewById(R.id.txtSaturdayCloseHoursField);
-    EditText txtSundayCloseHours = findViewById(R.id.txtSundayCloseHoursField);
-    Button btnUpdateInfo = findViewById(R.id.btnUpdateInfo);
-
-    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_manage_branch_profile);
+
+        //Variables
+        TextView txtBranchName = findViewById(R.id.txtBranchName);
+        EditText txtBranchAdresseField = findViewById(R.id.txtBranchAdresseField);
+        EditText txtBranchPhoneNumberField = findViewById(R.id.txtBranchPhoneNumberField);
+        EditText txtMondayOpenHours = findViewById(R.id.txtMondayOpenHoursField);
+        EditText txtTuesdayOpenHours = findViewById(R.id.txtTuesdayOpenHoursField);
+        EditText txtWednesdayOpenHours = findViewById(R.id.txtWednesdayOpenHoursField);
+        EditText txtThursdayOpenHours = findViewById(R.id.txtThursdayOpenHoursField);
+        EditText txtFridayOpenHours = findViewById(R.id.txtFridayOpenHoursField);
+        EditText txtSaturdayOpenHours = findViewById(R.id.txtSaturdayOpenHoursField);
+        EditText txtSundayOpenHours = findViewById(R.id.txtSundayOpenHoursField);
+        EditText txtMondayCloseHours = findViewById(R.id.txtMondayCloseHoursField);
+        EditText txtTuesdayCloseHours = findViewById(R.id.txtTuesdayCloseHoursField);
+        EditText txtWednesdayCloseHours = findViewById(R.id.txtWednesdayCloseHoursField);
+        EditText txtThursdayCloseHours = findViewById(R.id.txtThursdayCloseHoursField);
+        EditText txtFridayCloseHours = findViewById(R.id.txtFridayCloseHoursField);
+        EditText txtSaturdayCloseHours = findViewById(R.id.txtSaturdayCloseHoursField);
+        EditText txtSundayCloseHours = findViewById(R.id.txtSundayCloseHoursField);
+        Button btnUpdateInfo = findViewById(R.id.btnUpdateInfo);
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
         String branchName = getIntent().getStringExtra("EMAIL");
         txtBranchName.setText(branchName);

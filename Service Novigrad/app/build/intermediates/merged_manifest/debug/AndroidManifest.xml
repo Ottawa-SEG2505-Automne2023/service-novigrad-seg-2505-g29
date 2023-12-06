@@ -34,6 +34,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.Project" >
         <activity
+            android:name="com.example.project.UserAdresseSearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.UserSearchByAdresse"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.UserSearchBranchesActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.project.EmployeeManageBranchProfile"
             android:exported="false" />
         <activity

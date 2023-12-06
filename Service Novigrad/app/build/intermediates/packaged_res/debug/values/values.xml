@@ -26,6 +26,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_user_search_by_adresse">UserSearchByAdresseActivity</string>
     <string name="welcome">"Welcome !"</string>
     <style name="Base.Theme.Project" parent="Theme.Material3.DayNight.NoActionBar">
         

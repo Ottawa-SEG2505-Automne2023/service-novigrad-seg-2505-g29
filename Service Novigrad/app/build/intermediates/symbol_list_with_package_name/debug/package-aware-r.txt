@@ -3205,6 +3205,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnBack
 id btnCreateAccount
 id btnEditBranchProfile
 id btnLogin
@@ -3213,6 +3214,10 @@ id btnManageBranches
 id btnManageServices
 id btnManageUsers
 id btnReturnToHomepage
+id btnSearch
+id btnSearchByAdresse
+id btnSearchByHours
+id btnSearchByServices
 id btnUpdateInfo
 id btnViewServiceRequests
 id buttonAccept
@@ -3645,11 +3650,14 @@ id txtMondayCloseHoursField
 id txtMondayHours
 id txtMondayOpenHoursDisplay
 id txtMondayOpenHoursField
+id txtReturn
 id txtSaturdayCloseHoursDisplay
 id txtSaturdayCloseHoursField
 id txtSaturdayHours
 id txtSaturdayOpenHoursDisplay
 id txtSaturdayOpenHoursField
+id txtSearch
+id txtSearchField
 id txtSundayCloseHoursDisplay
 id txtSundayCloseHoursField
 id txtSundayHours
@@ -3660,6 +3668,7 @@ id txtThursdayCloseHoursField
 id txtThursdayHours
 id txtThursdayOpenHoursDisplay
 id txtThursdayOpenHoursField
+id txtTitle
 id txtTuesdayCloseHoursDisplay
 id txtTuesdayCloseHoursField
 id txtTuesdayHours
@@ -3670,6 +3679,7 @@ id txtWednesdayCloseHoursField
 id txtWednesdayHours
 id txtWednesdayOpenHoursDisplay
 id txtWednesdayOpenHoursField
+id txtWelcome
 id unchecked
 id uniform
 id unlabeled
@@ -3827,6 +3837,9 @@ layout activity_main
 layout activity_signup
 layout activity_user
 layout activity_user_actions
+layout activity_user_adresse_search_result
+layout activity_user_search_branches
+layout activity_user_search_by_adresse
 layout activity_view_requested_service
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -4118,6 +4131,7 @@ string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
 string title_activity_login
+string title_activity_user_search_by_adresse
 string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
