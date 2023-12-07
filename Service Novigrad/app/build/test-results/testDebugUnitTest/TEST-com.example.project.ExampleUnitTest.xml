@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.project.ExampleUnitTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2023-12-07T05:09:21" hostname="LAPTOP-SHGQKFRK" time="0.099">
+  <properties/>
+  <testcase name="checkServiceDocuments" classname="com.example.project.ExampleUnitTest" time="0.013"/>
+  <testcase name="ServiceRequestGetter" classname="com.example.project.ExampleUnitTest" time="0.003"/>
+  <testcase name="checkServiceFormFieldsSetters" classname="com.example.project.ExampleUnitTest" time="0.005"/>
+  <testcase name="checkServiceDocumentSetters" classname="com.example.project.ExampleUnitTest" time="0.0"/>
+  <testcase name="ServiceStatusGetter" classname="com.example.project.ExampleUnitTest" time="0.006"/>
+  <testcase name="ServiceEmployeeIDGetter" classname="com.example.project.ExampleUnitTest" time="0.001"/>
+  <testcase name="CheckOfferedServicesRemover" classname="com.example.project.ExampleUnitTest" time="0.006"/>
+  <testcase name="ServiceRatingGetter" classname="com.example.project.ExampleUnitTest" time="0.0"/>
+  <testcase name="checkServiceName" classname="com.example.project.ExampleUnitTest" time="0.0"/>
+  <testcase name="ServiceDocFieldsGetter" classname="com.example.project.ExampleUnitTest" time="0.001"/>
+  <testcase name="CheckOfferedServicesGetter" classname="com.example.project.ExampleUnitTest" time="0.0"/>
+  <testcase name="checkServiceFormFields" classname="com.example.project.ExampleUnitTest" time="0.002"/>
+  <testcase name="ServiceFormFieldsGetter" classname="com.example.project.ExampleUnitTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

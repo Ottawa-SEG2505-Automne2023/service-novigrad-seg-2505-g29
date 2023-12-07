@@ -14,7 +14,6 @@ public class Service implements Parcelable {
     private List<String> requiredDocuments;
 
     double rating;
-    int ratingCount;
 
     List<Service> serviceList;
 
@@ -26,7 +25,6 @@ public class Service implements Parcelable {
         this.formFields = formFields;
         this.requiredDocuments = requiredDocuments;
         rating = 0;
-        ratingCount = 0;
         serviceList = new ArrayList<>();
     }
 
@@ -57,8 +55,8 @@ public class Service implements Parcelable {
     }
 
     public void addRating(int rate) {
-        ratingCount++;
-        rating = (rating + rate)/ratingCount;
+        rating = rating + rate;
+        if(rating > 5){rating = rating/2;}
     }
 
     public boolean containsService(Service service) {

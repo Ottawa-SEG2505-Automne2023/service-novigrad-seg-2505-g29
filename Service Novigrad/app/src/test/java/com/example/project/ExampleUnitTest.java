@@ -65,18 +65,61 @@ public class ExampleUnitTest {
     {
         Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
         ArrayList<Service> services = new ArrayList<>();
-        services.add(service);
         EmployeeAccount employee = new EmployeeAccount("1","2","3","4",new ArrayList<>());
         employee.addOfferedService(service);
+        services.add(employee.getOfferedServices().get(0));
+        services.add(service);
+
         assertEquals(services, employee.getOfferedServices());
     }
-
+    @Test
     public void ServiceRatingGetter()
     {
         Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
         service.addRating(5);
         service.addRating(3);
-        assertEquals(service.getRating(),4);
+        assertEquals(service.getRating(),(double) (5+3)/2,0.1);
+    }
+    @Test
+    public void ServiceRequestGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ServiceRequest rq = new ServiceRequest(service,new ArrayList<String>(), new ArrayList<String>(),"Pending","test");
+        assertEquals(rq.getService(),service);
+    }
+    @Test
+    public void ServiceFormFieldsGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ArrayList<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        ServiceRequest rq = new ServiceRequest(service,list,new ArrayList<String>(),"Pending","test");
+        assertEquals(rq.getFormFieldValues(),list);
+    }
+    @Test
+    public void ServiceDocFieldsGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ArrayList<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        ServiceRequest rq = new ServiceRequest(service,new ArrayList<String>(),list,"Pending","test");
+        assertEquals(rq.getDocumentValues(),list);
+    }
+    @Test
+    public void ServiceStatusGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ServiceRequest rq = new ServiceRequest(service,new ArrayList<String>(), new ArrayList<String>(),"Pending","test");
+        assertEquals(rq.getStatus(),"Pending");
+    }
+    @Test
+    public void ServiceEmployeeIDGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        ServiceRequest rq = new ServiceRequest(service,new ArrayList<String>(), new ArrayList<String>(),"Pending","test");
+        assertEquals(rq.getEmployeeIdentifier(),"test");
     }
 
     @Test
@@ -86,6 +129,7 @@ public class ExampleUnitTest {
         ArrayList<Service> services = new ArrayList<>();
         EmployeeAccount employee = new EmployeeAccount("1","2","3","4",new ArrayList<>());
         employee.addOfferedService(service);
+        services.add(employee.getOfferedServices().get(0));
         employee.removeOfferedService(service);
         assertEquals(services, employee.getOfferedServices());
     }
