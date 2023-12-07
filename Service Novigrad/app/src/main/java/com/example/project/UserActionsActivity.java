@@ -240,7 +240,8 @@ public class UserActionsActivity extends AppCompatActivity {
                             flag[0] = false;
                             return;
 
-                        } else {
+                        }else if (serviceRequest == null){flag[0] = true;return;}
+                    else {
                             flag[0] = true;
                             return;
                         }

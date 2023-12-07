@@ -184,7 +184,7 @@ public class AdminManageServices extends AppCompatActivity {
 
     private void updateFirebase(List<Service> serviceList) {
         // Get a reference to the "services" node in the Firebase database
-        DatabaseReference servicesRef = databaseReference;
+        DatabaseReference servicesRef = FirebaseDatabase.getInstance().getReference("services");;
 
         // Clear existing data in the "services" node
         servicesRef.removeValue();

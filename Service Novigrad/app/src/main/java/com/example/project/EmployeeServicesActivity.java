@@ -129,6 +129,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
                     // Perform any action with the rating, such as saving it to the database
                     // For now, let's just show a Toast with the rating
                     selectedService.addRating(rating);
+                    updateServiceInDatabase(selectedService);
                     Toast.makeText(EmployeeServicesActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
                 } else {
                     // Handle the case where the input is empty
@@ -147,6 +148,14 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
         // Show the dialog
         builder.show();
+    }
+
+    private void updateServiceInDatabase(Service updatedService) {
+        // Assuming you have a reference to the Firebase Realtime Database
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("services");
+
+        // Update the service using its name as the key
+        databaseReference.child(updatedService.getName()).setValue(updatedService);
     }
 
 
