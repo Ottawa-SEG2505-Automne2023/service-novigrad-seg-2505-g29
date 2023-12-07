@@ -62,6 +62,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
                         // Populate the ListView with service names
                         for (Service service : offeredServices) {
+                            if(service.getName().equals("Default"))
                             servicesAdapter.add(service.getName() + "           Rating : " + service.getRating());
                         }
 
@@ -84,7 +85,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
                 // Create an intent to start the UserActionServiceActivity
                 Intent intent = new Intent(EmployeeServicesActivity.this, UserActionsActivity.class);
                 // Pass the selected service to UserActionServiceActivity
-                intent.putExtra("SELECTED_SERVICE", offeredServices.get(position));
+                intent.putExtra("SELECTED_SERVICE", offeredServices.get(position+1));
                 intent.putExtra("EMPLOYEE_EMAIL", employeeEmail);
                 startActivity(intent);
             }
