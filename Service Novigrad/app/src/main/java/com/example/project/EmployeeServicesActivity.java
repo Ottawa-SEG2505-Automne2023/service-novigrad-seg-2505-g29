@@ -32,6 +32,7 @@ import java.util.List;
 public class EmployeeServicesActivity extends AppCompatActivity {
 
     private List<Service> offeredServices = new ArrayList<>();
+    String employeeEmail;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
         // Get the email of the selected employee from the intent
         Intent intent = getIntent();
-        String employeeEmail = intent.getStringExtra("EMPLOYEE_EMAIL");
+        employeeEmail = intent.getStringExtra("EMPLOYEE_EMAIL");
         // Retrieve offered services from Firebase
         DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
         Query query = employeeRef.orderByChild("email").equalTo(employeeEmail);
@@ -62,8 +63,8 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
                         // Populate the ListView with service names
                         for (Service service : offeredServices) {
-                            if(service.getName().equals("Default"))
-                            servicesAdapter.add(service.getName() + "           Rating : " + service.getRating());
+                            if(!service.getName().equals("Default")){
+                            servicesAdapter.add(service.getName() + "           Rating : " + service.getRating());}
                         }
 
                         // Notify the adapter
@@ -95,7 +96,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 // Show a dialog for rating the service
-                showRatingDialog(offeredServices.get(position));
+                showRatingDialog(offeredServices.get(position+1));
                 return true; // Consume the long click event
             }
         });
@@ -130,7 +131,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
                     // Perform any action with the rating, such as saving it to the database
                     // For now, let's just show a Toast with the rating
                     selectedService.addRating(rating);
-                    updateServiceInDatabase(selectedService);
+                    updateServiceInDatabase(selectedService,employeeEmail);
                     Toast.makeText(EmployeeServicesActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
                 } else {
                     // Handle the case where the input is empty
@@ -151,13 +152,40 @@ public class EmployeeServicesActivity extends AppCompatActivity {
         builder.show();
     }
 
-    private void updateServiceInDatabase(Service updatedService) {
+    private void updateServiceInDatabase(Service updatedService, String employeeEmail) {
         // Assuming you have a reference to the Firebase Realtime Database
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("services");
+        DatabaseReference employeeRef = FirebaseDatabase.getInstance().getReference("Employee accounts/");
+        Query query = employeeRef.orderByChild("email").equalTo(employeeEmail);
 
-        // Update the service using its name as the key
-        databaseReference.child(updatedService.getName()).setValue(updatedService);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    EmployeeAccount employee = snapshot.getValue(EmployeeAccount.class);
+                    if (employee != null) {
+                        // Get the list of offered services
+                        List<Service> offeredServices = employee.getOfferedServices();
+
+                        // Update the service in the list
+                        for (int i = 0; i < offeredServices.size(); i++) {
+                            if (offeredServices.get(i).getName().equals(updatedService.getName())) {
+                                offeredServices.set(i, updatedService);
+                                break;
+                            }
+                        }
+
+                        // Update the employee's account in the database
+                        employeeRef.child(snapshot.getKey()).setValue(employee);
+                        break; // Break the loop after finding and updating the employee
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(EmployeeServicesActivity.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
 
 }
