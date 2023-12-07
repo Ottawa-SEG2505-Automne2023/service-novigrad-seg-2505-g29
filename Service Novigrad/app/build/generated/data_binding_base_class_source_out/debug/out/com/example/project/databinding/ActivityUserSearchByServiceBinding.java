@@ -22,6 +22,9 @@ public final class ActivityUserSearchByServiceBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btnBack;
+
+  @NonNull
   public final Button btnSearch;
 
   @NonNull
@@ -31,8 +34,10 @@ public final class ActivityUserSearchByServiceBinding implements ViewBinding {
   public final EditText txtSearchField;
 
   private ActivityUserSearchByServiceBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnSearch, @NonNull TextView txtSearch, @NonNull EditText txtSearchField) {
+      @NonNull Button btnBack, @NonNull Button btnSearch, @NonNull TextView txtSearch,
+      @NonNull EditText txtSearchField) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
     this.btnSearch = btnSearch;
     this.txtSearch = txtSearch;
     this.txtSearchField = txtSearchField;
@@ -65,6 +70,12 @@ public final class ActivityUserSearchByServiceBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnBack;
+      Button btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.btnSearch;
       Button btnSearch = ViewBindings.findChildViewById(rootView, id);
       if (btnSearch == null) {
@@ -83,7 +94,7 @@ public final class ActivityUserSearchByServiceBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityUserSearchByServiceBinding((ConstraintLayout) rootView, btnSearch,
+      return new ActivityUserSearchByServiceBinding((ConstraintLayout) rootView, btnBack, btnSearch,
           txtSearch, txtSearchField);
     }
     String missingId = rootView.getResources().getResourceName(id);
