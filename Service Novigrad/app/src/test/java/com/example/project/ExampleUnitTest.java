@@ -66,9 +66,17 @@ public class ExampleUnitTest {
         Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
         ArrayList<Service> services = new ArrayList<>();
         services.add(service);
-        EmployeeAccount employee = new EmployeeAccount("1","2","3","4");
+        EmployeeAccount employee = new EmployeeAccount("1","2","3","4",new ArrayList<>());
         employee.addOfferedService(service);
         assertEquals(services, employee.getOfferedServices());
+    }
+
+    public void ServiceRatingGetter()
+    {
+        Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
+        service.addRating(5);
+        service.addRating(3);
+        assertEquals(service.getRating(),4);
     }
 
     @Test
@@ -76,7 +84,7 @@ public class ExampleUnitTest {
     {
         Service service = new Service("a",new ArrayList<String>(), new ArrayList<String>());
         ArrayList<Service> services = new ArrayList<>();
-        EmployeeAccount employee = new EmployeeAccount("1","2","3","4");
+        EmployeeAccount employee = new EmployeeAccount("1","2","3","4",new ArrayList<>());
         employee.addOfferedService(service);
         employee.removeOfferedService(service);
         assertEquals(services, employee.getOfferedServices());

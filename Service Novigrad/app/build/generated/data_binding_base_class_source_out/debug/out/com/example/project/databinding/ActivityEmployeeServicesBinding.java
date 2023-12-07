@@ -24,13 +24,13 @@ public final class ActivityEmployeeServicesBinding implements ViewBinding {
   public final ListView listViewServices;
 
   @NonNull
-  public final TextView textViewEmployeeServices;
+  public final TextView textViewServicePrompt;
 
   private ActivityEmployeeServicesBinding(@NonNull LinearLayout rootView,
-      @NonNull ListView listViewServices, @NonNull TextView textViewEmployeeServices) {
+      @NonNull ListView listViewServices, @NonNull TextView textViewServicePrompt) {
     this.rootView = rootView;
     this.listViewServices = listViewServices;
-    this.textViewEmployeeServices = textViewEmployeeServices;
+    this.textViewServicePrompt = textViewServicePrompt;
   }
 
   @Override
@@ -66,14 +66,14 @@ public final class ActivityEmployeeServicesBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textViewEmployeeServices;
-      TextView textViewEmployeeServices = ViewBindings.findChildViewById(rootView, id);
-      if (textViewEmployeeServices == null) {
+      id = R.id.textViewServicePrompt;
+      TextView textViewServicePrompt = ViewBindings.findChildViewById(rootView, id);
+      if (textViewServicePrompt == null) {
         break missingId;
       }
 
       return new ActivityEmployeeServicesBinding((LinearLayout) rootView, listViewServices,
-          textViewEmployeeServices);
+          textViewServicePrompt);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

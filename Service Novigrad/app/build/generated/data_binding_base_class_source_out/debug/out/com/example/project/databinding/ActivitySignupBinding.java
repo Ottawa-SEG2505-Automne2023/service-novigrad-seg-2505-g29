@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,6 +22,9 @@ import java.lang.String;
 public final class ActivitySignupBinding implements ViewBinding {
   @NonNull
   private final RelativeLayout rootView;
+
+  @NonNull
+  public final RadioGroup RadioGroup;
 
   @NonNull
   public final Button btnCreateAccount;
@@ -52,13 +56,14 @@ public final class ActivitySignupBinding implements ViewBinding {
   @NonNull
   public final RadioButton userRadioButton;
 
-  private ActivitySignupBinding(@NonNull RelativeLayout rootView, @NonNull Button btnCreateAccount,
-      @NonNull RadioButton employeeRadioButton, @NonNull EditText inputEmail,
-      @NonNull EditText inputFirstName, @NonNull EditText inputLastName,
-      @NonNull EditText inputPassword, @NonNull EditText inputPasswordConfirm,
-      @NonNull TextView sign, @NonNull TextView switchToSignin,
-      @NonNull RadioButton userRadioButton) {
+  private ActivitySignupBinding(@NonNull RelativeLayout rootView, @NonNull RadioGroup RadioGroup,
+      @NonNull Button btnCreateAccount, @NonNull RadioButton employeeRadioButton,
+      @NonNull EditText inputEmail, @NonNull EditText inputFirstName,
+      @NonNull EditText inputLastName, @NonNull EditText inputPassword,
+      @NonNull EditText inputPasswordConfirm, @NonNull TextView sign,
+      @NonNull TextView switchToSignin, @NonNull RadioButton userRadioButton) {
     this.rootView = rootView;
+    this.RadioGroup = RadioGroup;
     this.btnCreateAccount = btnCreateAccount;
     this.employeeRadioButton = employeeRadioButton;
     this.inputEmail = inputEmail;
@@ -98,6 +103,12 @@ public final class ActivitySignupBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.RadioGroup;
+      RadioGroup RadioGroup = ViewBindings.findChildViewById(rootView, id);
+      if (RadioGroup == null) {
+        break missingId;
+      }
+
       id = R.id.btnCreateAccount;
       Button btnCreateAccount = ViewBindings.findChildViewById(rootView, id);
       if (btnCreateAccount == null) {
@@ -158,7 +169,7 @@ public final class ActivitySignupBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySignupBinding((RelativeLayout) rootView, btnCreateAccount,
+      return new ActivitySignupBinding((RelativeLayout) rootView, RadioGroup, btnCreateAccount,
           employeeRadioButton, inputEmail, inputFirstName, inputLastName, inputPassword,
           inputPasswordConfirm, sign, switchToSignin, userRadioButton);
     }

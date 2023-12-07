@@ -64,7 +64,7 @@ public class UserActivity extends AppCompatActivity {
                     EmployeeAccount employee = snapshot.getValue(EmployeeAccount.class);
                     if (employee != null) {
                         employeeAccounts.add(employee);
-                        employeeNames.add(employee.getEmail());
+                        employeeNames.add(employee.getFirstName());
                     }
                 }
                 // Notify the adapter

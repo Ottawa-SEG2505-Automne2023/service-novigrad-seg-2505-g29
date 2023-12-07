@@ -3231,6 +3231,7 @@ id buttonCreateServiceType
 id buttonDecline
 id buttonDeleteService
 id buttonPanel
+id buttonSubmitRating
 id buttonSubmitRequest
 id buttonUpdateService
 id cache_measures
@@ -3306,6 +3307,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editTextRating
 id editTextServiceName
 id edit_query
 id edit_text_id
@@ -3608,9 +3610,9 @@ id textView
 id textView2
 id textView3
 id textViewAvailableServices
-id textViewEmployeeServices
 id textViewRequestsTitle
 id textViewServiceName
+id textViewServicePrompt
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3828,6 +3830,7 @@ layout activity_admin_homepage
 layout activity_admin_manage_branches
 layout activity_admin_manage_services
 layout activity_admin_manage_users
+layout activity_dialog_rating
 layout activity_employee_branch_profile
 layout activity_employee_homepage
 layout activity_employee_manage_branch_profile

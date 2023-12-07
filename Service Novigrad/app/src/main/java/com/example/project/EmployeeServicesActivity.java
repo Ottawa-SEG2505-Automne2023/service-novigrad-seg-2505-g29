@@ -7,9 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.NumberPicker;
 import android.widget.RatingBar;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -99,13 +102,13 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
     }
 
-    private void showRatingDialog (Service selectedService){
+    private void showRatingDialog(Service selectedService) {
         // Create a custom layout for the dialog
         LayoutInflater inflater = getLayoutInflater();
-        View dialogLayout = inflater.inflate(R.layout.dialog_rating, null);
+        View dialogLayout = inflater.inflate(R.layout.activity_dialog_rating, null);
 
-        // Find the NumberPicker in the layout
-        NumberPicker numberPickerRating = dialogLayout.findViewById(R.id.numberPickerRating);
+        // Find the EditText in the layout
+        EditText editTextRating = dialogLayout.findViewById(R.id.editTextRating);
 
         // Build the dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -116,13 +119,21 @@ public class EmployeeServicesActivity extends AppCompatActivity {
         builder.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // Get the selected rating
-                int rating = numberPickerRating.getValue();
-                selectedService.addRating(rating);
+                // Get the entered rating as a string
+                String ratingText = editTextRating.getText().toString();
 
-                // Perform any action with the rating, such as saving it to the database
-                // For now, let's just show a Toast with the rating
-                Toast.makeText(EmployeeServicesActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
+                if (!ratingText.isEmpty()) {
+                    // Convert the string to an integer
+                    int rating = Integer.parseInt(ratingText);
+
+                    // Perform any action with the rating, such as saving it to the database
+                    // For now, let's just show a Toast with the rating
+                    selectedService.addRating(rating);
+                    Toast.makeText(EmployeeServicesActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
+                } else {
+                    // Handle the case where the input is empty
+                    Toast.makeText(EmployeeServicesActivity.this, "Please enter a rating", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -137,4 +148,6 @@ public class EmployeeServicesActivity extends AppCompatActivity {
         // Show the dialog
         builder.show();
     }
+
+
 }

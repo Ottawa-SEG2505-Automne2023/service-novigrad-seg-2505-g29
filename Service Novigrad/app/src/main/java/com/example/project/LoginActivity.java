@@ -64,6 +64,8 @@ public class LoginActivity extends AppCompatActivity {
                 //Checks if neither or both types of accounts are selected
                 else if (!userRadioButton.isChecked() && !employeeRadioButton.isChecked()) {
                     Toast.makeText(LoginActivity.this, "please select the kind of account you are logging in as", Toast.LENGTH_SHORT).show();
+                    userRadioButton.setChecked(false);
+                    employeeRadioButton.setChecked(false);
                 }
                 else if (userRadioButton.isChecked() && employeeRadioButton.isChecked()) {
                     Toast.makeText(LoginActivity.this, "Please select only one type of account", Toast.LENGTH_SHORT).show();

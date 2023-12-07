@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,6 +22,9 @@ import java.lang.String;
 public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   private final RelativeLayout rootView;
+
+  @NonNull
+  public final RadioGroup RadioGroup;
 
   @NonNull
   public final Button btnLogin;
@@ -43,11 +47,12 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final RadioButton userRadioButton;
 
-  private ActivityLoginBinding(@NonNull RelativeLayout rootView, @NonNull Button btnLogin,
-      @NonNull RadioButton employeeRadioButton, @NonNull EditText inputEmail,
-      @NonNull EditText inputPassword, @NonNull TextView sign, @NonNull TextView switchToSignup,
-      @NonNull RadioButton userRadioButton) {
+  private ActivityLoginBinding(@NonNull RelativeLayout rootView, @NonNull RadioGroup RadioGroup,
+      @NonNull Button btnLogin, @NonNull RadioButton employeeRadioButton,
+      @NonNull EditText inputEmail, @NonNull EditText inputPassword, @NonNull TextView sign,
+      @NonNull TextView switchToSignup, @NonNull RadioButton userRadioButton) {
     this.rootView = rootView;
+    this.RadioGroup = RadioGroup;
     this.btnLogin = btnLogin;
     this.employeeRadioButton = employeeRadioButton;
     this.inputEmail = inputEmail;
@@ -84,6 +89,12 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.RadioGroup;
+      RadioGroup RadioGroup = ViewBindings.findChildViewById(rootView, id);
+      if (RadioGroup == null) {
+        break missingId;
+      }
+
       id = R.id.btnLogin;
       Button btnLogin = ViewBindings.findChildViewById(rootView, id);
       if (btnLogin == null) {
@@ -126,8 +137,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((RelativeLayout) rootView, btnLogin, employeeRadioButton,
-          inputEmail, inputPassword, sign, switchToSignup, userRadioButton);
+      return new ActivityLoginBinding((RelativeLayout) rootView, RadioGroup, btnLogin,
+          employeeRadioButton, inputEmail, inputPassword, sign, switchToSignup, userRadioButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
