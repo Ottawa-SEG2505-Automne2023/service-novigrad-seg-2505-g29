@@ -1,14 +1,19 @@
 package com.example.project;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.NumberPicker;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -54,7 +59,7 @@ public class EmployeeServicesActivity extends AppCompatActivity {
 
                         // Populate the ListView with service names
                         for (Service service : offeredServices) {
-                            servicesAdapter.add(service.getName());
+                            servicesAdapter.add(service.getName() + "           Rating : " + service.getRating());
                         }
 
                         // Notify the adapter
@@ -81,6 +86,55 @@ public class EmployeeServicesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        listViewServices.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                // Show a dialog for rating the service
+                showRatingDialog(offeredServices.get(position));
+                return true; // Consume the long click event
+            }
+        });
+
+
+    }
+
+    private void showRatingDialog (Service selectedService){
+        // Create a custom layout for the dialog
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogLayout = inflater.inflate(R.layout.dialog_rating, null);
+
+        // Find the NumberPicker in the layout
+        NumberPicker numberPickerRating = dialogLayout.findViewById(R.id.numberPickerRating);
+
+        // Build the dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogLayout);
+        builder.setTitle("Rate the service");
+
+        // Set positive button
+        builder.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Get the selected rating
+                int rating = numberPickerRating.getValue();
+                selectedService.addRating(rating);
+
+                // Perform any action with the rating, such as saving it to the database
+                // For now, let's just show a Toast with the rating
+                Toast.makeText(EmployeeServicesActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Set negative button
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss(); // Dismiss the dialog without doing anything
+            }
+        });
+
+        // Show the dialog
+        builder.show();
     }
 }
-

@@ -1,5 +1,6 @@
 package com.example.project;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,11 @@ public class Service implements Parcelable {
     private List<String> formFields;
     private List<String> requiredDocuments;
 
+    double rating;
+    int ratingCount;
+
+    List<Service> serviceList;
+
     // Constructors, getters, and setters
 
     public Service(String name, List<String> formFields, List<String> requiredDocuments) {
@@ -19,6 +25,9 @@ public class Service implements Parcelable {
         this.name = name;
         this.formFields = formFields;
         this.requiredDocuments = requiredDocuments;
+        rating = 0;
+        ratingCount = 0;
+        serviceList = new ArrayList<>();
     }
 
     // Getter and Setter methods
@@ -45,6 +54,19 @@ public class Service implements Parcelable {
 
     public void setRequiredDocuments(List<String> requiredDocuments) {
         this.requiredDocuments = requiredDocuments;
+    }
+
+    public void addRating(int rate) {
+        ratingCount++;
+        rating = (rating + rate)/ratingCount;
+    }
+
+    public boolean containsService(Service service) {
+        return serviceList.contains(service);
+    }
+
+    public double getRating() {
+        return rating;
     }
 
     public Service() {

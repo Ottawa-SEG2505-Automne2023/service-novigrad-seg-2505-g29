@@ -28,6 +28,9 @@ public class EmployeeAccount extends Account{
     List<Service> offeredServices;
 
 
+
+
+
     public EmployeeAccount(){
     }
     public EmployeeAccount(String firstName, String lastName, String email, String password, List<Service> arrayList) {
@@ -74,5 +77,7 @@ public class EmployeeAccount extends Account{
 
         return result;
     }
+
+
 
 }
