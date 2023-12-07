@@ -4,7 +4,7 @@
             "outputFile": "com.example.project.app-mergeDebugResources-39:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Daali Othmane\\.gradle\\caches\\transforms-3\\8178229870c6a47a52025ded9fca3bf5\\transformed\\core-1.13.0-alpha02\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Gabriel\\.gradle\\caches\\transforms-3\\cd2ddca4ee45d113798c55846f3e5481\\transformed\\core-1.13.0-alpha02\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Daali Othmane\\.gradle\\caches\\transforms-3\\0bd2034fe2f8e756a904f78074a73b6d\\transformed\\browser-1.4.0\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Gabriel\\.gradle\\caches\\transforms-3\\37a38d1ee3eaf3de77954b491b77e16a\\transformed\\browser-1.4.0\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Daali Othmane\\.gradle\\caches\\transforms-3\\23b1799a94ed89fda088f4e20bdeccc4\\transformed\\appcompat-1.6.1\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\Gabriel\\.gradle\\caches\\transforms-3\\7d2d9846a2c6c4ff2dd03d6bf06998a1\\transformed\\appcompat-1.6.1\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
